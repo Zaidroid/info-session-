@@ -92,7 +92,6 @@ export default function Layout({ children, activeSpeaker }) {
             }}>
                 {children}
             </main>
-            <SpeakerChip speaker={activeSpeaker} />
         </>
     );
 }

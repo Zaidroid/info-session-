@@ -16,9 +16,14 @@ export function CapacityBuilding() {
                 variants={containerVariants}
                 style={{ width: '100%', height: '100%' }}
             >
-                <motion.h2 variants={fadeInUp} style={{ marginBottom: 'var(--space-2xl)' }}>
-                    Capacity Building
-                </motion.h2>
+                <motion.div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 'var(--space-2xl)' }}>
+                    <motion.h2 variants={fadeInUp}>
+                        Capacity Building
+                    </motion.h2>
+                    <motion.div variants={fadeInUp} style={{ fontSize: 'var(--font-size-lg)', color: 'var(--color-text-secondary)', background: 'rgba(255,255,255,0.1)', padding: '4px 12px', borderRadius: '20px' }}>
+                        Elevate 2.0
+                    </motion.div>
+                </motion.div>
 
                 <div className="grid-3">
                     <FeatureCard
@@ -30,17 +35,21 @@ export function CapacityBuilding() {
                             <div style={{ marginBottom: 'var(--space-sm)' }}>
                                 <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>40 Interns</strong>
                                 <div style={{ color: 'var(--color-text-tertiary)', fontSize: 'var(--font-size-xs)' }}>
-                                    Placed in 10 companies
+                                    Placed in 10 companies (20 WB, 20 Gaza)
                                 </div>
                             </div>
-                            <div style={{ marginBottom: 'var(--space-sm)' }}>
-                                <strong className="gradient-text" style={{ fontSize: 'var(--font-size-xl)' }}>52.5% Hired</strong>
-                                <div style={{ color: 'var(--color-text-tertiary)', fontSize: 'var(--font-size-xs)' }}>
-                                    21 interns secured positions
+                            <div style={{ marginBottom: 'var(--space-sm)', padding: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                                    <span>West Bank Hiring:</span>
+                                    <strong style={{ color: 'var(--color-accent-secondary)' }}>75%</strong>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span>Gaza Hiring:</span>
+                                    <strong style={{ color: 'var(--color-accent-primary)' }}>30%</strong>
                                 </div>
                             </div>
                             <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)', marginTop: 'var(--space-md)' }}>
-                                DevOps, Blockchain, Cybersecurity, UI/UX & more
+                                ODOO, ASP.NET, Angular, Blockchain, Cybersec, UI/UX
                             </div>
                         </div>
                     </FeatureCard>
@@ -189,51 +198,94 @@ export function WorkingSpaces() {
                 variants={containerVariants}
                 style={{ width: '100%', height: '100%' }}
             >
-                <motion.h2 variants={fadeInUp} style={{ marginBottom: 'var(--space-md)' }}>
-                    Supporting Resilience
-                </motion.h2>
-                <motion.h3
-                    variants={fadeInUp}
-                    style={{
-                        marginBottom: 'var(--space-2xl)',
-                        color: 'var(--color-text-primary)',
-                        fontSize: 'var(--font-size-2xl)',
-                    }}
-                >
-                    Working Spaces in Gaza
-                </motion.h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-xl)', height: '100%' }}>
 
-                <div className="grid-2" style={{ gridTemplateColumns: '1.3fr 0.7fr', gap: 'var(--space-2xl)' }}>
-                    <motion.div
-                        variants={fadeInUp}
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            gap: 'var(--space-lg)',
-                        }}
-                    >
-                        <p style={{ fontSize: 'clamp(1.1rem, 2vmin, 1.4rem)', lineHeight: 'var(--line-height-relaxed)' }}>
-                            Providing physical and digital infrastructure to ensure continuity for tech companies and freelancers in Gaza.
-                        </p>
+                    {/* Left Column: Header & Context */}
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <motion.h2 variants={fadeInUp} style={{ marginBottom: 'var(--space-md)' }}>
+                            Supporting Resilience
+                        </motion.h2>
 
-                        <ul style={{ fontSize: 'clamp(1rem, 1.8vmin, 1.25rem)' }}>
-                            <li>Safe, equipped co-working hubs</li>
-                            <li>Reliable Internet & Power solutions</li>
-                            <li>Community support & networking</li>
-                        </ul>
-                    </motion.div>
+                        <motion.div variants={fadeInUp}>
+                            <h3 className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)', marginBottom: 'var(--space-sm)' }}>
+                                Gaza Coworking Support
+                            </h3>
+                            <p style={{ fontSize: 'var(--font-size-md)', color: 'var(--color-text-secondary)', lineHeight: '1.6' }}>
+                                Revitalizing Gaza’s tech ecosystem by providing direct support to existing co-working spaces to serve as access points, learning hubs, and community spaces.
+                            </p>
+                        </motion.div>
 
-                    <FeatureCard
-                        title="Vital for Survival"
-                        description="Enabling teams to stay operational despite the crisis."
-                        highlighted={true}
-                        delay={0.2}
-                        style={{
-                            justifyContent: 'center',
-                            textAlign: 'center',
-                        }}
-                    />
+                        <motion.div
+                            variants={fadeInUp}
+                            style={{ margin: 'var(--space-lg) 0' }}
+                        >
+                            <h4 style={{ color: 'var(--color-accent-secondary)', marginBottom: 'var(--space-sm)' }}>Program Objectives</h4>
+                            <ul style={{ fontSize: 'var(--font-size-sm)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                <li><strong>Infrastructure Rehabilitation:</strong> Restoring essential tech hubs.</li>
+                                <li><strong>Work Continuity:</strong> Enabling remote work & learning.</li>
+                                <li><strong>Geographic Reach:</strong> Expanding coverage across Gaza.</li>
+                                <li><strong>Sustainability:</strong> Developing resilient operating models.</li>
+                            </ul>
+                        </motion.div>
+
+                        <motion.div variants={fadeInUp} style={{ marginTop: 'auto' }}>
+                            <div style={{ padding: 'var(--space-md)', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
+                                <strong style={{ color: 'var(--color-accent-primary)' }}>Cohort 2 (Feb 2026):</strong>
+                                <p style={{ margin: '4px 0 0', fontSize: 'var(--font-size-sm)' }}>Targeting 7-10 additional spaces.</p>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Right Column: Cards & Details */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+
+                        <FeatureCard
+                            title="Cohort 1 (Current)"
+                            description="5 Spaces Selected (Aug 2025 - Jan 2026)"
+                            delay={0.2}
+                            highlighted={true}
+                        >
+                            <div style={{ fontSize: 'var(--font-size-sm)', marginTop: 'var(--space-sm)' }}>
+                                <div style={{ display: 'flex', gap: 'var(--space-sm)', flexWrap: 'wrap' }}>
+                                    <span style={{ background: 'rgba(255,255,255,0.1)', padding: '4px 8px', borderRadius: '4px', fontSize: '12px' }}>Operational Spaces</span>
+                                    <span style={{ background: 'rgba(255,255,255,0.1)', padding: '4px 8px', borderRadius: '4px', fontSize: '12px' }}>Legally Registered</span>
+                                    <span style={{ background: 'rgba(255,255,255,0.1)', padding: '4px 8px', borderRadius: '4px', fontSize: '12px' }}>Safe Zones</span>
+                                </div>
+                            </div>
+                        </FeatureCard>
+
+                        <FeatureCard
+                            title="Cohort 2 Targets"
+                            description="Expanding geographic reach and continuity for 2026."
+                            delay={0.3}
+                        >
+                            <div style={{ marginTop: 'var(--space-md)' }}>
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '1rem',
+                                    background: 'rgba(255,255,255,0.05)',
+                                    padding: '1rem',
+                                    borderRadius: '12px',
+                                    border: '1px solid rgba(255,255,255,0.1)'
+                                }}>
+                                    <div style={{
+                                        fontSize: '2.5rem',
+                                        fontWeight: '700',
+                                        color: 'var(--color-accent-primary)',
+                                        lineHeight: 1
+                                    }}>
+                                        7-10
+                                    </div>
+                                    <div style={{ fontSize: '0.9rem', color: 'var(--color-text-primary)' }}>
+                                        Additional Spaces<br />
+                                        <span style={{ opacity: 0.7 }}>To be supported</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </FeatureCard>
+
+                    </div>
                 </div>
             </motion.div>
         </Slide>
