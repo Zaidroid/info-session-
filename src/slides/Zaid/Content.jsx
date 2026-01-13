@@ -207,16 +207,15 @@ export function MarketAccessImpact() {
 
                         <div className="grid-2" style={{ gap: 'var(--space-2xl)' }}>
                             <AnimatedMetric
-                                value={18}
-                                label="Unique Companies"
-                                suffix="+"
+                                value={25}
+                                label="Elevate 2 Companies"
                                 size="small"
                                 duration={2}
                                 delay={0.2}
                             />
                             <AnimatedMetric
-                                value={4}
-                                label="New Registrations"
+                                value={35}
+                                label="Elevate 3 Companies"
                                 size="small"
                                 duration={1.8}
                                 delay={0.4}

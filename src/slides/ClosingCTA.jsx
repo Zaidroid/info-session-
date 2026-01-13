@@ -161,7 +161,7 @@ export default function ClosingCTA() {
                     style={{ marginTop: 'var(--space-2xl)' }}
                 >
                     <p style={{ fontSize: 'var(--font-size-base)', fontWeight: 'var(--font-weight-medium)' }}>
-                        Applications Open until Feb 20th, 2026
+                        Applications Open until Feb 22nd, 2026
                     </p>
                 </motion.div>
             </div>

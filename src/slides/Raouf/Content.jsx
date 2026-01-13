@@ -148,10 +148,10 @@ export function Marketing() {
                                         color: 'var(--color-accent-secondary)',
                                     }}
                                 >
-                                    Agency Rebranding
+                                    Hiring Marketing Agencies
                                 </strong>
                                 <p style={{ margin: 0 }}>
-                                    Comprehensive visual overhaul led by specialized agencies.
+                                    Strengthening brand positioning, digital presence, SEO, and go-to-market readiness.
                                 </p>
                             </div>
 
@@ -164,10 +164,10 @@ export function Marketing() {
                                         color: 'var(--color-accent-secondary)',
                                     }}
                                 >
-                                    Internal Resources
+                                    Hiring Marketing Resources (TTH)
                                 </strong>
                                 <p style={{ margin: 0 }}>
-                                    Stipends for dedicated marketing staff.
+                                    Stipends for dedicated marketing staff within companies.
                                 </p>
                             </div>
 
