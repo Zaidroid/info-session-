@@ -1,0 +1,306 @@
+:root {
+    /* ===== Brand Colors (Gaza Sky Geeks) ===== */
+    --brand-red: #DE6336;
+    /* Primary highlight, CTA */
+    --brand-teal: #309DC4;
+    /* Links, accents, UI components */
+    --brand-navy: #1F3036;
+    /* Backgrounds, headers, primary text */
+    --brand-orange: #E78B3F;
+    /* Secondary highlights, icons */
+
+    /* ===== Semantic Colors - Light Theme ===== */
+    --color-bg-primary: #f8fafc;
+    --color-bg-secondary: #f1f5f9;
+    --color-bg-tertiary: #e2e8f0;
+
+    --color-surface: rgba(255, 255, 255, 0.85);
+    /* Slightly more opaque for better legibility */
+    --color-surface-elevated: #ffffff;
+    --color-surface-hover: #ffffff;
+
+    --color-text-primary: var(--brand-navy);
+    --color-text-secondary: #475569;
+    --color-text-tertiary: #64748b;
+    --color-text-inverse: #ffffff;
+
+    /* Mapping Brand Colors to Semantic Accents */
+    --color-accent-primary: var(--brand-red);
+    --color-accent-secondary: var(--brand-teal);
+    --color-accent-tertiary: var(--brand-orange);
+
+    --color-border-subtle: rgba(31, 48, 54, 0.1);
+    /* Derived from Navy */
+    --color-border-medium: rgba(31, 48, 54, 0.2);
+    --color-border-strong: rgba(31, 48, 54, 0.4);
+
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: var(--brand-teal);
+
+    /* ===== Gradients ===== */
+    /* Updated to use Red/Teal/Orange palette */
+    --gradient-primary: linear-gradient(135deg, var(--brand-red), var(--brand-orange));
+    --gradient-secondary: linear-gradient(135deg, var(--brand-teal), var(--brand-navy));
+    --gradient-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+    --gradient-accent: linear-gradient(90deg, var(--brand-red), var(--brand-teal));
+
+    --gradient-radial-primary: radial-gradient(circle, var(--brand-red) 0%, transparent 70%);
+    --gradient-radial-secondary: radial-gradient(circle, var(--brand-teal) 0%, transparent 70%);
+
+    /* ===== Shadows & Elevation ===== */
+    --shadow-xs: 0 1px 2px rgba(31, 48, 54, 0.05);
+    --shadow-sm: 0 2px 4px rgba(31, 48, 54, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(31, 48, 54, 0.1), 0 2px 4px -1px rgba(31, 48, 54, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(31, 48, 54, 0.1), 0 4px 6px -2px rgba(31, 48, 54, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(31, 48, 54, 0.15), 0 10px 10px -5px rgba(31, 48, 54, 0.05);
+    --shadow-2xl: 0 25px 50px -12px rgba(31, 48, 54, 0.25);
+
+    /* Glows using brand colors */
+    --shadow-glow: 0 0 20px rgba(222, 99, 54, 0.3);
+    /* Red glow */
+    --shadow-glow-strong: 0 0 40px rgba(222, 99, 54, 0.5);
+
+    /* ===== Spacing Scale ===== */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+
+    /* ===== Border Radius ===== */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* ===== Animation Timings ===== */
+    --duration-instant: 0.1s;
+    --duration-fast: 0.2s;
+    --duration-normal: 0.3s;
+    --duration-slow: 0.5s;
+    --duration-slower: 0.8s;
+    --duration-slowest: 1.2s;
+
+    /* ===== Easing Functions ===== */
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* ===== Glassmorphism ===== */
+    --glass-blur: 12px;
+    --glass-blur-strong: 20px;
+    --glass-opacity: 0.8;
+    --glass-border: 1px solid var(--color-border-subtle);
+
+    /* ===== Typography Scale ===== */
+    /* Updated Font Families */
+    --font-family: 'Source Sans Pro', 'Tajawal', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Fira Code', 'Courier New', monospace;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    --font-size-7xl: 4.5rem;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    /* Source Sans Pro semibold is often 600 */
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 900;
+    /* Source Sans Pro black */
+
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
+
+    /* ===== Z-Index Scale ===== */
+    --z-background: -1;
+    --z-base: 0;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-overlay: 500;
+    --z-modal: 1000;
+    --z-popover: 1500;
+    --z-toast: 2000;
+
+    /* ===== Particle System ===== */
+    --particle-color: rgba(48, 157, 196, 0.3);
+    /* Teal */
+    --particle-connection-color: rgba(222, 99, 54, 0.2);
+    /* Red */
+    --particle-count: 50;
+}
+
+/* ===== Dark Theme Overrides ===== */
+[data-theme='dark'] {
+    --color-bg-primary: var(--brand-navy);
+    --color-bg-secondary: #273b45;
+    /* Slightly lighter navy */
+    --color-bg-tertiary: #304652;
+
+    --color-surface: rgba(31, 48, 54, 0.7);
+    --color-surface-elevated: rgba(31, 48, 54, 0.85);
+    --color-surface-hover: rgba(31, 48, 54, 0.95);
+
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-tertiary: #94a3b8;
+    --color-text-inverse: var(--brand-navy);
+
+    --color-accent-tertiary: var(--brand-orange);
+
+    --color-border-subtle: rgba(255, 255, 255, 0.1);
+    --color-border-medium: rgba(255, 255, 255, 0.15);
+    --color-border-strong: rgba(255, 255, 255, 0.2);
+
+    --gradient-surface: linear-gradient(135deg, rgba(31, 48, 54, 0.6) 0%, rgba(31, 48, 54, 0.2) 100%);
+
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+
+    --particle-color: rgba(48, 157, 196, 0.4);
+    --particle-connection-color: rgba(222, 99, 54, 0.3);
+}
+
+/* ===== Utility Classes ===== */
+
+/* Glassmorphism utilities */
+.glass {
+    background: var(--color-surface);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: var(--glass-border);
+}
+
+.glass-strong {
+    background: var(--color-surface-elevated);
+    backdrop-filter: blur(var(--glass-blur-strong));
+    -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+    border: var(--glass-border);
+}
+
+/* Gradient utilities */
+.gradient-text {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+    background: var(--gradient-primary);
+}
+
+/* Glow effects */
+.glow {
+    box-shadow: var(--shadow-glow);
+}
+
+.glow-strong {
+    box-shadow: var(--shadow-glow-strong);
+}
+
+/* Animation utilities */
+.animate-fade-in {
+    animation: fadeIn var(--duration-normal) var(--ease-out) forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp var(--duration-slow) var(--ease-spring) forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn var(--duration-slow) var(--ease-spring) forwards;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
