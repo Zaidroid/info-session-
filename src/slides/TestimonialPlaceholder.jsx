@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Slide from '../components/Slide';
 import { Quote } from 'lucide-react';
 
-export default function TestimonialPlaceholder({ companyName = "Company Name", speakerName = "Speaker Name" }) {
+export default function TestimonialPlaceholder({ companyName = "Company Name", speakerName = "Speaker Name", role = "", photo, photoPosition = "center" }) {
     return (
         <Slide>
             <div style={{
@@ -44,16 +44,55 @@ export default function TestimonialPlaceholder({ companyName = "Company Name", s
                         {companyName}
                     </h2>
 
-                    <div style={{ width: '120px', height: '120px', background: '#333', borderRadius: '50%', margin: '0 auto var(--space-lg)', overflow: 'hidden' }}>
-                        {/* Placeholder for speaker image */}
-                        <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#666' }}>
-                            Photo
-                        </div>
+                    <div style={{
+                        width: '150px',
+                        height: '150px',
+                        borderRadius: '50%',
+                        margin: '0 auto var(--space-lg)',
+                        overflow: 'hidden',
+                        border: '4px solid var(--color-accent-primary)',
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                        background: '#f0f0f0',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
+                        {photo ? (
+                            <img
+                                src={photo}
+                                alt={speakerName}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                    objectPosition: photoPosition
+                                }}
+                            />
+                        ) : (
+                            <div style={{
+                                width: '100%',
+                                height: '100%',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                color: '#999',
+                                fontSize: '0.9rem',
+                                fontWeight: '500'
+                            }}>
+                                No Photo
+                            </div>
+                        )}
                     </div>
 
-                    <h3 style={{ fontSize: 'var(--font-size-xl)', color: 'var(--color-text-primary)' }}>
+                    <h3 style={{ fontSize: 'var(--font-size-2xl)', color: 'var(--color-text-primary)', marginBottom: 'var(--space-xs)', fontWeight: 'bold' }}>
                         {speakerName}
                     </h3>
+
+                    {role && (
+                        <div style={{ fontSize: 'var(--font-size-lg)', color: 'var(--color-accent-secondary)', fontWeight: '500' }}>
+                            {role}
+                        </div>
+                    )}
 
                     <p style={{ marginTop: 'var(--space-md)', color: 'var(--color-text-secondary)', fontStyle: 'italic' }}>
                         Testimonial content will be added here.

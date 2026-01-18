@@ -159,30 +159,57 @@ const GeographicalDistribution = () => {
                         }}
                     >
                         {/* Panel Header */}
-                        <div style={{ marginBottom: 'var(--space-md)' }}>
-                            <div style={{
-                                fontSize: 'var(--font-size-sm)',
-                                color: 'var(--color-text-tertiary)',
-                                textTransform: 'uppercase',
-                                letterSpacing: '1.5px',
-                                fontWeight: 'var(--font-weight-bold)',
-                                marginBottom: 'var(--space-xs)'
-                            }}>
-                                Elevate 1.0
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'flex-start',
+                            marginBottom: 'var(--space-md)'
+                        }}>
+                            <div>
+                                <div style={{
+                                    fontSize: 'var(--font-size-sm)',
+                                    color: 'var(--color-text-tertiary)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontWeight: 'var(--font-weight-bold)',
+                                    marginBottom: 'var(--space-xs)'
+                                }}>
+                                    Elevate 1.0
+                                </div>
+                                <div style={{
+                                    fontSize: 'var(--font-size-3xl)',
+                                    fontWeight: 'var(--font-weight-extrabold)',
+                                    color: 'var(--color-text-primary)'
+                                }}>
+                                    2024
+                                </div>
+                                <div style={{
+                                    fontSize: 'var(--font-size-lg)',
+                                    color: 'var(--color-text-secondary)',
+                                    marginTop: 'var(--space-xs)'
+                                }}>
+                                    {total2024} Companies
+                                </div>
                             </div>
+
+                            {/* 2024 Specific Funnel Stats - Compact Right Side */}
                             <div style={{
-                                fontSize: 'var(--font-size-3xl)',
-                                fontWeight: 'var(--font-weight-extrabold)',
-                                color: 'var(--color-text-primary)'
+                                display: 'flex',
+                                gap: 'var(--space-md)',
+                                background: 'rgba(255,255,255,0.03)',
+                                padding: 'var(--space-sm) var(--space-md)',
+                                borderRadius: 'var(--radius-lg)',
+                                border: '1px solid var(--color-border-subtle)'
                             }}>
-                                2024
-                            </div>
-                            <div style={{
-                                fontSize: 'var(--font-size-lg)',
-                                color: 'var(--color-text-secondary)',
-                                marginTop: 'var(--space-xs)'
-                            }}>
-                                {total2024} Companies
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-text-primary)', lineHeight: 1 }}>43</span>
+                                    <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Interviewed</span>
+                                </div>
+                                <div style={{ width: '1px', background: 'var(--color-border-subtle)' }} />
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-accent-primary)', lineHeight: 1 }}>27</span>
+                                    <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Supported</span>
+                                </div>
                             </div>
                         </div>
 
@@ -285,30 +312,57 @@ const GeographicalDistribution = () => {
                         }}
                     >
                         {/* Panel Header */}
-                        <div style={{ marginBottom: 'var(--space-md)' }}>
-                            <div style={{
-                                fontSize: 'var(--font-size-sm)',
-                                color: 'var(--color-text-tertiary)',
-                                textTransform: 'uppercase',
-                                letterSpacing: '1.5px',
-                                fontWeight: 'var(--font-weight-bold)',
-                                marginBottom: 'var(--space-xs)'
-                            }}>
-                                Elevate 2.0
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'flex-start',
+                            marginBottom: 'var(--space-md)'
+                        }}>
+                            <div>
+                                <div style={{
+                                    fontSize: 'var(--font-size-sm)',
+                                    color: 'var(--color-text-tertiary)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1.5px',
+                                    fontWeight: 'var(--font-weight-bold)',
+                                    marginBottom: 'var(--space-xs)'
+                                }}>
+                                    Elevate 2.0
+                                </div>
+                                <div style={{
+                                    fontSize: 'var(--font-size-3xl)',
+                                    fontWeight: 'var(--font-weight-extrabold)',
+                                    color: 'var(--color-text-primary)'
+                                }}>
+                                    2025
+                                </div>
+                                <div style={{
+                                    fontSize: 'var(--font-size-lg)',
+                                    color: 'var(--color-text-secondary)',
+                                    marginTop: 'var(--space-xs)'
+                                }}>
+                                    {total2025} Companies
+                                </div>
                             </div>
+
+                            {/* 2025 Specific Funnel Stats - Compact Right Side */}
                             <div style={{
-                                fontSize: 'var(--font-size-3xl)',
-                                fontWeight: 'var(--font-weight-extrabold)',
-                                color: 'var(--color-text-primary)'
+                                display: 'flex',
+                                gap: 'var(--space-md)',
+                                background: 'rgba(255,255,255,0.03)',
+                                padding: 'var(--space-sm) var(--space-md)',
+                                borderRadius: 'var(--radius-lg)',
+                                border: '1px solid var(--color-border-subtle)'
                             }}>
-                                2025
-                            </div>
-                            <div style={{
-                                fontSize: 'var(--font-size-lg)',
-                                color: 'var(--color-text-secondary)',
-                                marginTop: 'var(--space-xs)'
-                            }}>
-                                {total2025} Companies
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-text-primary)', lineHeight: 1 }}>48</span>
+                                    <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Interviewed</span>
+                                </div>
+                                <div style={{ width: '1px', background: 'var(--color-border-subtle)' }} />
+                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-success)', lineHeight: 1 }}>36</span>
+                                    <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Supported</span>
+                                </div>
                             </div>
                         </div>
 
@@ -417,7 +471,8 @@ const GeographicalDistribution = () => {
                         display: 'flex',
                         gap: 'var(--space-sm)',
                         marginTop: 'var(--space-md)',
-                        flexWrap: 'wrap'
+                        flexWrap: 'wrap',
+                        justifyContent: 'center'
                     }}
                 >
                     <div style={{
@@ -462,67 +517,7 @@ const GeographicalDistribution = () => {
                     </div>
                 </motion.div>
 
-                {/* Application Stats */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.8, duration: 0.5 }}
-                    style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(3, 1fr)',
-                        gap: 'var(--space-md)',
-                        marginTop: 'var(--space-lg)'
-                    }}
-                >
-                    <div style={{
-                        padding: 'var(--space-md)',
-                        background: 'var(--color-surface)',
-                        backdropFilter: 'blur(var(--glass-blur))',
-                        WebkitBackdropFilter: 'blur(var(--glass-blur))',
-                        borderRadius: 'var(--radius-lg)',
-                        border: '1px solid var(--color-border-subtle)',
-                        textAlign: 'center'
-                    }}>
-                        <div style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-extrabold)', color: 'var(--color-text-primary)', marginBottom: 'var(--space-xs)' }}>
-                            {total2024 + total2025}
-                        </div>
-                        <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                            Applied
-                        </div>
-                    </div>
-                    <div style={{
-                        padding: 'var(--space-md)',
-                        background: 'var(--color-surface)',
-                        backdropFilter: 'blur(var(--glass-blur))',
-                        WebkitBackdropFilter: 'blur(var(--glass-blur))',
-                        borderRadius: 'var(--radius-lg)',
-                        border: '1px solid var(--color-border-subtle)',
-                        textAlign: 'center'
-                    }}>
-                        <div style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-extrabold)', color: 'var(--color-accent-secondary)', marginBottom: 'var(--space-xs)' }}>
-                            {Math.floor((total2024 + total2025) * 0.6)}
-                        </div>
-                        <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                            Interviewed
-                        </div>
-                    </div>
-                    <div style={{
-                        padding: 'var(--space-md)',
-                        background: 'var(--color-surface)',
-                        backdropFilter: 'blur(var(--glass-blur))',
-                        WebkitBackdropFilter: 'blur(var(--glass-blur))',
-                        borderRadius: 'var(--radius-lg)',
-                        border: '1px solid var(--color-border-subtle)',
-                        textAlign: 'center'
-                    }}>
-                        <div style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-extrabold)', color: 'var(--color-accent-primary)', marginBottom: 'var(--space-xs)' }}>
-                            {total2025}
-                        </div>
-                        <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                            Selected
-                        </div>
-                    </div>
-                </motion.div>
+
             </div>
         </Slide>
     );

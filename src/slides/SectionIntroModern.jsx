@@ -54,23 +54,24 @@ export default function SectionIntroModern({ title, subtitle, presenter, role, p
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ delay: 0.4, duration: 0.8, type: 'spring' }}
                             style={{
-                                background: 'var(--color-surface-elevated)',
+                                background: 'rgba(255,255,255,0.03)', // Much more subtle background
                                 backdropFilter: 'blur(var(--glass-blur))',
                                 WebkitBackdropFilter: 'blur(var(--glass-blur))',
-                                border: '2px solid var(--color-border-subtle)',
+                                border: '1px solid rgba(255,255,255,0.08)', // Fainter border
                                 borderRadius: 'var(--radius-2xl)',
-                                padding: 'var(--space-lg)',
-                                boxShadow: 'var(--shadow-xl)',
+                                padding: 'var(--space-xl)', // Increased padding
+                                boxShadow: 'var(--shadow-lg)', // Softer shadow
                                 position: 'relative',
-                                overflow: 'hidden',
+                                overflow: 'visible', // Allow slight overlap if needed, or stick to hidden but nicer
                             }}
                         >
                             {/* Decorative gradient background */}
                             <div style={{
                                 position: 'absolute',
                                 inset: 0,
-                                background: 'radial-gradient(circle at 50% 50%, rgba(222, 99, 54, 0.1) 0%, transparent 70%)',
-                                pointerEvents: 'none'
+                                background: 'radial-gradient(circle at 50% 50%, rgba(222, 99, 54, 0.05) 0%, transparent 60%)', // Very faint glow
+                                pointerEvents: 'none',
+                                borderRadius: 'var(--radius-2xl)' // Match container radius
                             }} />
 
                             <motion.img

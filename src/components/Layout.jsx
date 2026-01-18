@@ -59,12 +59,12 @@ function Background({ theme }) {
 }
 
 export default function Layout({ children, activeSpeaker }) {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     // Detect theme from data-theme attribute
     useEffect(() => {
         const observer = new MutationObserver(() => {
-            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
             setTheme(currentTheme);
         });
 
@@ -74,7 +74,7 @@ export default function Layout({ children, activeSpeaker }) {
         });
 
         // Initial theme
-        setTheme(document.documentElement.getAttribute('data-theme') || 'light');
+        setTheme(document.documentElement.getAttribute('data-theme') || 'dark');
 
         return () => observer.disconnect();
     }, []);

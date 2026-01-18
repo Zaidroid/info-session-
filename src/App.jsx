@@ -30,17 +30,22 @@ import { MarketAccessProgressive } from './slides/Zaid/MarketAccessProgressive';
 import { ElevateBridge } from './slides/Zaid/ElevateBridge';
 import { MarketAccessImpact } from './slides/Zaid/Content';
 
-import alanPhoto from './assets/speakers/Alan.jpeg';
+import alanPhoto from './assets/speakers/Alan2.JPG';
 import randPhoto from './assets/speakers/Rand.JPG';
 import hazemPhoto from './assets/speakers/Hazem.JPG';
 import raoufPhoto from './assets/speakers/Raouf.JPG';
 import zaidPhoto from './assets/speakers/Zaid.JPG';
 import elevateLogo from './assets/elevate-logo-03.png';
+import yahyaPhoto from './assets/companies/Yahya.jpeg';
+import adelPhoto from './assets/companies/Adel_Ewaida.png';
+import arefPhoto from './assets/companies/Aref.jpg';
+import radixPhoto from './assets/companies/Adel_Joudallah.jpg';
+import tech360Photo from './assets/companies/Imad.jpg';
 
 // Speaker Config
 const SPEAKERS = {
   ALAN: { name: "Alan El Kadhi", role: "GSG Program Director", photo: alanPhoto },
-  RAND: { name: "Rand Safi", role: "GSG West Bank Senior Manager", photo: randPhoto },
+  RAND: { name: "Rand Safi", role: "Senior program manager", photo: randPhoto },
   HAZEM: { name: "Hazem Kiwan", role: "GSG Program Manager", photo: hazemPhoto },
   RAOUF: { name: "Raouf Said", role: "Companies Program Senior Officer", photo: raoufPhoto },
   ZAID: { name: "Zaid Salem", role: "Market Access Officer", photo: zaidPhoto },
@@ -138,8 +143,7 @@ function App() {
     },
     { component: <CapacityBuilding />, speaker: SPEAKERS.RAOUF },
 
-    // NEW: Intern Testimonials (CB Feedback)
-    { component: <InternTestimonials />, speaker: SPEAKERS.RAOUF },
+
 
     // NEW: Marketing Brief
     {
@@ -203,13 +207,13 @@ function App() {
     { component: <IntroTestimonials />, speaker: null },
 
     // Testimonials
-    { component: <TestimonialPlaceholder companyName="Company 1" speakerName="Speaker 1" />, speaker: null },
-    { component: <TestimonialPlaceholder companyName="Company 2" speakerName="Speaker 2" />, speaker: null },
-    { component: <TestimonialPlaceholder companyName="Company 3" speakerName="Speaker 3" />, speaker: null },
-    { component: <TestimonialPlaceholder companyName="Company 4" speakerName="Speaker 4" />, speaker: null },
-    { component: <TestimonialPlaceholder companyName="Company 5" speakerName="Speaker 5" />, speaker: null },
-    { component: <TestimonialPlaceholder companyName="Company 6" speakerName="Speaker 6" />, speaker: null },
-    { component: <TestimonialPlaceholder companyName="Company 7" speakerName="Speaker 7" />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="Jaffa" speakerName="Dr. Yahya Alsalqan" role="CEO" photo={yahyaPhoto} />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="Scope Systems" speakerName="Adel Ewaida" role="Product Manager" photo={adelPhoto} photoPosition="center 15%" />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="Top Mena Talents" speakerName="Aref Hanaysheh" role="CEO" photo={arefPhoto} />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="PITS" speakerName="Mohammed Abed Alraheem" role="CEO" />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="Radix" speakerName="Adel Jodalah" role="CEO" photo={radixPhoto} />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="Dotline" speakerName="Odai Abu Baker" role="CEO" />, speaker: null },
+    { component: <TestimonialPlaceholder companyName="Tech 360" speakerName="Imad Temeiza" role="Deputy CEO" photo={tech360Photo} />, speaker: null },
 
 
     // Closing CTA

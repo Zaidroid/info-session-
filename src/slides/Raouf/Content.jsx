@@ -18,8 +18,9 @@ export function CapacityBuilding() {
             >
                 <motion.div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 'var(--space-2xl)', flexDirection: 'column' }}>
                     {/* Elevate Logo Concept */}
-                    <motion.h2 variants={fadeInUp} style={{ fontSize: '4rem', fontWeight: '900', letterSpacing: '-2px', lineHeight: 1 }}>
-                        Elevate <span className="gradient-text">2025</span>
+                    <motion.h2 variants={fadeInUp} style={{ fontSize: '4rem', fontWeight: '900', letterSpacing: '-2px', lineHeight: 1, textAlign: 'center' }}>
+                        Elevate <span className="gradient-text">2.0</span>
+                        <div style={{ fontSize: '2.5rem', marginTop: 'var(--space-xs)', color: 'var(--color-text-secondary)' }}>2025</div>
                     </motion.h2>
                 </motion.div>
 
@@ -76,6 +77,7 @@ export function CapacityBuilding() {
                         title="Talent Recovery"
                         description="Supporting Gaza-based companies by covering salaries to recover war-affected employees."
                         highlighted={true}
+                        highlightLabel="Gaza Specific"
                         delay={0.3}
                     >
                         <div
@@ -94,21 +96,7 @@ export function CapacityBuilding() {
                     </FeatureCard>
                 </div>
 
-                {/* NEW: Stats Section */}
-                <motion.div variants={fadeInUp} style={{ marginTop: 'var(--space-xl)', display: 'flex', justifyContent: 'space-around', background: 'rgba(255,255,255,0.05)', padding: 'var(--space-lg)', borderRadius: 'var(--radius-lg)' }}>
-                    <div style={{ textAlign: 'center' }}>
-                        <div className="gradient-text" style={{ fontSize: '2.5rem', fontWeight: 800 }}>10</div>
-                        <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', textTransform: 'uppercase' }}>Companies Reached</div>
-                    </div>
-                    <div style={{ textAlign: 'center' }}>
-                        <div className="gradient-text" style={{ fontSize: '2.5rem', fontWeight: 800 }}>188</div>
-                        <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', textTransform: 'uppercase' }}>Applicants</div>
-                    </div>
-                    <div style={{ textAlign: 'center' }}>
-                        <div className="gradient-text" style={{ fontSize: '2.5rem', fontWeight: 800 }}>90+</div>
-                        <div style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', textTransform: 'uppercase' }}>Interviewed</div>
-                    </div>
-                </motion.div>
+
             </motion.div>
         </Slide>
     );
@@ -132,14 +120,35 @@ export function Marketing() {
 
                 <div className="grid-2">
                     <FeatureCard
-                        title="Sub-Interventions"
+                        title="Program Overview"
                         delay={0.1}
                     >
-                        <div style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)' }}>
-                            <ul style={{ fontSize: 'var(--font-size-sm)', marginTop: 'var(--space-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)' }}>
-                                <li><strong>Contracting Marketing Agency</strong></li>
-                                <li><strong>Placing Marketing Resources (TTH)</strong></li>
-                            </ul>
+                        <div style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+                            <p style={{ lineHeight: '1.6', margin: 0, color: 'var(--color-text-secondary)' }}>
+                                A comprehensive program designed to strengthen companies' market presence through professional marketing support and dedicated resources.
+                            </p>
+
+                            <div>
+                                <h4 style={{ fontSize: 'var(--font-size-base)', fontWeight: 'var(--font-weight-bold)', color: 'var(--color-accent-secondary)', marginBottom: 'var(--space-sm)' }}>
+                                    Two-Track Approach
+                                </h4>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
+                                    <div style={{ padding: 'var(--space-sm)', background: 'rgba(222, 99, 54, 0.1)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--color-accent-primary)' }}>
+                                        <strong style={{ display: 'block', marginBottom: 'var(--space-xs)', color: 'var(--color-accent-primary)' }}>1. Marketing Agency Contracts</strong>
+                                        <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>Professional agencies for comprehensive marketing strategy</span>
+                                    </div>
+                                    <div style={{ padding: 'var(--space-sm)', background: 'rgba(48, 157, 196, 0.1)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--color-accent-secondary)' }}>
+                                        <strong style={{ display: 'block', marginBottom: 'var(--space-xs)', color: 'var(--color-accent-secondary)' }}>2. Train-to-Hire Marketing Resources</strong>
+                                        <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>Dedicated in-house marketing staff placement</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style={{ padding: 'var(--space-md)', background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border-subtle)' }}>
+                                <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: 'var(--space-xs)' }}>Impact</div>
+                                <div style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-extrabold)', color: 'var(--color-accent-primary)' }}>9 Companies</div>
+                                <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>3 Gaza, 6 West Bank</div>
+                            </div>
                         </div>
                     </FeatureCard>
 

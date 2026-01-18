@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Megaphone, Monitor, Code, Briefcase } from 'lucide-react';
 import Slide from '../components/Slide';
+import FeedbackWall from '../components/FeedbackWall';
 import { staggerContainer, fadeInUp } from '../utils/animations';
 
 export default function ElevateOverview() {
@@ -25,6 +26,18 @@ export default function ElevateOverview() {
 
     return (
         <Slide>
+            {/* Background - FeedbackWall */}
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                zIndex: 0
+            }}>
+                <FeedbackWall />
+            </div>
+
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -35,7 +48,9 @@ export default function ElevateOverview() {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    position: 'relative',
+                    zIndex: 1
                 }}
             >
                 <motion.div variants={fadeInUp} style={{ textAlign: 'center', marginBottom: '4rem' }}>

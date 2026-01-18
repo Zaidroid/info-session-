@@ -15,43 +15,30 @@ export default function GazaVideoPlaceholder() {
                 alignItems: 'center',
                 textAlign: 'center'
             }}>
-                <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    style={{
-                        width: '80%',
-                        maxWidth: '800px',
-                        aspectRatio: '16/9',
-                        background: 'rgba(0,0,0,0.3)',
-                        borderRadius: 'var(--radius-lg)',
-                        border: '2px dashed var(--color-accent-primary)',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        marginBottom: 'var(--space-lg)'
-                    }}
-                >
-                    <div style={{
-                        width: '80px',
-                        height: '80px',
-                        borderRadius: '50%',
-                        background: 'var(--color-accent-primary)',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        boxShadow: '0 0 30px rgba(222, 99, 54, 0.4)'
-                    }}>
-                        <Play size={40} color="white" fill="white" style={{ marginLeft: '4px' }} />
-                    </div>
-                </motion.div>
+                <div style={{
+                    width: '95%',
+                    maxWidth: '1400px',
+                    aspectRatio: '16/9',
+                    borderRadius: 'var(--radius-lg)',
+                    overflow: 'hidden',
+                    boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    marginBottom: 'var(--space-lg)'
+                }}>
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/Qfpyj1AEd_0?si=30Ljy2drVgDxgIo1&rel=0&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3"
+                        title="Gaza Resilience Video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                    ></iframe>
+                </div>
 
                 <h2 style={{ fontSize: 'var(--font-size-2xl)', marginBottom: 'var(--space-md)' }}>
-                    Gaza Resilience Video
+                    Gaza Resilience
                 </h2>
-                <p style={{ color: 'var(--color-text-secondary)' }}>
-                    Video will be inserted here when available.
-                </p>
             </div>
         </Slide>
     );

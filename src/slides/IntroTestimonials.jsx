@@ -22,7 +22,7 @@ const IntroTestimonials = () => {
                 </motion.h2>
 
                 <motion.p variants={fadeInUp} className="text-2xl text-text-secondary text-center max-w-2xl font-light">
-                    Hearing directly from the partners who are driving change.
+                    Hearing directly from the Elevate companies who are driving change.
                 </motion.p>
             </motion.div>
         </Slide>

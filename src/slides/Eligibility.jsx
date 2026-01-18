@@ -8,6 +8,7 @@ export default function Eligibility() {
     const criteria = [
         "Official Ministry of National Economy Licenses",
         "Corporate Registration & Bank Account",
+        "Support focus: Established MSMEs (Micro, Small & Medium Enterprises)",
         "Commitment to Youth & Women Employment",
         "Physical HQ in Palestine",
         "Digital Services & Software Focus"

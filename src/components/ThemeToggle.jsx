@@ -3,7 +3,7 @@ import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

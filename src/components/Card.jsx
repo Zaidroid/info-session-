@@ -182,25 +182,28 @@ export const StatCard = ({ number, label, icon, suffix = '', prefix = '', delay 
     );
 };
 
-export const FeatureCard = ({ icon, title, description, children, delay = 0, highlighted = false }) => {
+export const FeatureCard = ({ icon, title, description, children, delay = 0, highlighted = false, highlightLabel = 'Featured', style = {}, highlightStyle = {} }) => {
     return (
-        <Card variant={highlighted ? 'highlight' : 'feature'} delay={delay} hoverable={true} tilt3D={true}>
-            {highlighted && (
+        <Card variant={highlighted ? 'highlight' : 'feature'} delay={delay} hoverable={true} tilt3D={true} style={style}>
+            {highlighted && highlightLabel && (
                 <div
                     style={{
                         position: 'absolute',
                         top: 0,
                         right: 0,
                         padding: '0.3rem 1rem',
-                        background: 'var(--color-accent-primary)',
+                        background: style.borderColor || 'var(--color-accent-primary)',
                         color: 'white',
                         fontSize: 'var(--font-size-xs)',
                         fontWeight: 'var(--font-weight-bold)',
                         borderBottomLeftRadius: 'var(--radius-lg)',
                         zIndex: 2,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        ...highlightStyle
                     }}
                 >
-                    Featured
+                    {highlightLabel}
                 </div>
             )}
 

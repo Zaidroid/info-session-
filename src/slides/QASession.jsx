@@ -16,22 +16,19 @@ export default function QASession() {
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
-                {/* Giant Background Q */}
+                {/* Giant Background Icon */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
-                    animate={{ opacity: 0.05, scale: 1, rotate: 0 }}
-                    transition={{ duration: 1 }}
+                    animate={{ opacity: 0.03, scale: 1, rotate: -10 }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
                     style={{
                         position: 'absolute',
-                        fontSize: '40vw',
-                        fontWeight: 900,
-                        color: 'var(--color-text-primary)',
                         zIndex: 0,
                         pointerEvents: 'none',
-                        lineHeight: 0
+                        color: 'var(--color-text-primary)'
                     }}
                 >
-                    ?
+                    <HelpCircle size={800} strokeWidth={0.5} />
                 </motion.div>
 
                 <motion.div

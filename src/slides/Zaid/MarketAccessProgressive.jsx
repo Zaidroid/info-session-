@@ -251,6 +251,12 @@ export function MarketAccessProgressive({ step = 0 }) {
                                     title="ElevateBridge"
                                     description="Specialized network of Market Access Hunters."
                                     highlighted={true}
+                                    highlightLabel={null}
+                                    style={{
+                                        borderColor: 'var(--brand-orange)',
+                                        boxShadow: '0 0 25px rgba(231, 139, 63, 0.3)',
+                                        animation: 'pulse 2s infinite ease-in-out'
+                                    }}
                                     delay={0}
                                 >
                                     <p style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)', lineHeight: 'var(--line-height-relaxed)' }}>
