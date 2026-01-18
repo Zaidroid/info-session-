@@ -125,7 +125,7 @@ function App() {
     { component: <ElevateOverview />, speaker: SPEAKERS.RAOUF },
 
     // NEW: Company Niches
-    { component: <CompanyNiches />, speaker: SPEAKERS.RAOUF },
+    // { component: <CompanyNiches />, speaker: SPEAKERS.RAOUF },
 
     // NEW: Geographical Distribution
     { component: <GeographicalDistribution />, speaker: SPEAKERS.RAOUF },
@@ -293,8 +293,8 @@ function App() {
             { id: 'RAND', label: 'Rand', photo: SPEAKERS.RAND.photo, targetIndex: 3, isActive: (s) => s?.name.includes('Rand') },
             { id: 'HAZEM', label: 'Hazem', photo: SPEAKERS.HAZEM.photo, targetIndex: 7, isActive: (s) => s?.name.includes('Hazem') },
             { id: 'RAOUF', label: 'Raouf', photo: SPEAKERS.RAOUF.photo, targetIndex: 13, isActive: (s) => s?.name.includes('Raouf') },
-            { id: 'ZAID', label: 'Zaid', photo: SPEAKERS.ZAID.photo, targetIndex: 24, isActive: (s) => s?.name.includes('Zaid') },
-            { id: 'APPLY', label: 'Apply', isAction: true, targetIndex: 38, isActive: () => currentIndex === 38 },
+            { id: 'ZAID', label: 'Zaid', photo: SPEAKERS.ZAID.photo, targetIndex: 23, isActive: (s) => s?.name.includes('Zaid') },
+            { id: 'APPLY', label: 'Apply', isAction: true, targetIndex: 37, isActive: () => currentIndex === 37 },
           ].map(item => {
             const isActive = item.isActive(currentSlide.speaker);
             return (
