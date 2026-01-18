@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Slide from '../../components/Slide';
 import { FeatureCard } from '../../components/Card';
 import { staggerContainer, fadeInUp } from '../../utils/animations';
+import { Megaphone, Palette, Search, Users, ExternalLink, Globe } from 'lucide-react';
 
 // Animation Variants
 const containerVariants = staggerContainer(0.15);
@@ -103,98 +104,225 @@ export function CapacityBuilding() {
 }
 
 export function Marketing() {
+    const scope = [
+        { icon: Palette, text: 'Brand Strategy & Positioning' },
+        { icon: Megaphone, text: 'Campaigns & Creative Production' },
+        { icon: Search, text: 'SEO & Digital Visibility' },
+        { icon: Globe, text: 'Social Media & Market Presence' },
+    ];
+
     return (
         <Slide>
+            {/* Background Effects */}
+            <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'radial-gradient(circle at 10% 10%, rgba(48, 157, 196, 0.05) 0%, transparent 50%), radial-gradient(circle at 90% 90%, rgba(222, 99, 54, 0.05) 0%, transparent 50%)',
+                zIndex: 0,
+                pointerEvents: 'none'
+            }} />
+
             <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                style={{ width: '100%', height: '100%' }}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    padding: 'var(--space-md) var(--space-2xl)',
+                    position: 'relative',
+                    zIndex: 1
+                }}
             >
-                <motion.div variants={fadeInUp} style={{ marginBottom: 'var(--space-xl)' }}>
-                    <h2 style={{ marginBottom: 'var(--space-sm)' }}>Marketing & Branding</h2>
-                    <p style={{ fontSize: 'var(--font-size-lg)', color: 'var(--color-text-secondary)', maxWidth: '800px' }}>
-                        Improve the visibility and visual identity of companies
-                    </p>
-                </motion.div>
-
-                <div className="grid-2">
-                    <FeatureCard
-                        title="Program Overview"
-                        delay={0.1}
-                    >
-                        <div style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-                            <p style={{ lineHeight: '1.6', margin: 0, color: 'var(--color-text-secondary)' }}>
-                                A comprehensive program designed to strengthen companies' market presence through professional marketing support and dedicated resources.
-                            </p>
-
-                            <div>
-                                <h4 style={{ fontSize: 'var(--font-size-base)', fontWeight: 'var(--font-weight-bold)', color: 'var(--color-accent-secondary)', marginBottom: 'var(--space-sm)' }}>
-                                    Two-Track Approach
-                                </h4>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
-                                    <div style={{ padding: 'var(--space-sm)', background: 'rgba(222, 99, 54, 0.1)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--color-accent-primary)' }}>
-                                        <strong style={{ display: 'block', marginBottom: 'var(--space-xs)', color: 'var(--color-accent-primary)' }}>1. Marketing Agency Contracts</strong>
-                                        <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>Professional agencies for comprehensive marketing strategy</span>
-                                    </div>
-                                    <div style={{ padding: 'var(--space-sm)', background: 'rgba(48, 157, 196, 0.1)', borderRadius: 'var(--radius-md)', borderLeft: '3px solid var(--color-accent-secondary)' }}>
-                                        <strong style={{ display: 'block', marginBottom: 'var(--space-xs)', color: 'var(--color-accent-secondary)' }}>2. Train-to-Hire Marketing Resources</strong>
-                                        <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>Dedicated in-house marketing staff placement</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style={{ padding: 'var(--space-md)', background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border-subtle)' }}>
-                                <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: 'var(--space-xs)' }}>Impact</div>
-                                <div style={{ fontSize: 'var(--font-size-2xl)', fontWeight: 'var(--font-weight-extrabold)', color: 'var(--color-accent-primary)' }}>9 Companies</div>
-                                <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>3 Gaza, 6 West Bank</div>
-                            </div>
+                {/* Header Row */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 0.8fr',
+                    gap: 'var(--space-2xl)',
+                    marginBottom: 'var(--space-lg)',
+                    alignItems: 'center'
+                }}>
+                    <motion.div variants={fadeInUp}>
+                        <div className="badge" style={{
+                            background: 'var(--brand-teal)',
+                            color: 'white',
+                            marginBottom: 'var(--space-md)',
+                            boxShadow: '0 4px 15px rgba(48, 157, 196, 0.3)'
+                        }} >
+                            Visibility & Identity
                         </div>
-                    </FeatureCard>
+                        <h2 style={{
+                            fontSize: 'clamp(2.5rem, 6vmin, 4rem)',
+                            fontWeight: 900,
+                            margin: 0,
+                            letterSpacing: '-0.02em',
+                            lineHeight: 1
+                        }}>
+                            Marketing & <span className="gradient-text">Branding</span>
+                        </h2>
+                        <p style={{
+                            fontSize: 'var(--font-size-md)',
+                            margin: 'var(--space-sm) 0 0',
+                            color: 'var(--color-text-secondary)',
+                            fontWeight: 300,
+                            maxWidth: '600px'
+                        }}>
+                            Elevating the global digital presence of Palestinian tech companies through professional support and talent.
+                        </p>
+                    </motion.div>
 
-                    <FeatureCard
-                        title="Scope of Work"
-                        delay={0.2}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="glass-strong"
+                        style={{
+                            padding: 'var(--space-lg)',
+                            borderRadius: 'var(--radius-2xl)',
+                            borderRight: '4px solid var(--brand-teal)',
+                            background: 'var(--color-surface-elevated)'
+                        }}
                     >
-                        <div style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)' }}>
-                            <ul style={{ fontSize: 'var(--font-size-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)' }}>
-                                <li>Brand Strategy & Positioning</li>
-                                <li>Marketing strategy</li>
-                                <li>Social Media Content & Creative Production</li>
-                                <li>SEO & Digital Visibility</li>
-                                <li>Coaching and Training of marketing resources</li>
-                                <li>Campaigns management</li>
-                                <li>Campaign sponsorship support</li>
-                            </ul>
-                        </div>
-                    </FeatureCard>
+                        <h4 style={{ textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--brand-teal)', margin: '0 0 8px' }}>
+                            Strategic Focus
+                        </h4>
+                        <p style={{ margin: 0, fontSize: '1rem', lineHeight: 1.5, fontWeight: 500, color: 'var(--color-text-primary)' }}>
+                            Strengthening market readiness with dedicated agency support and in-house marketing experts.
+                        </p>
+                    </motion.div>
                 </div>
 
-                {/* Results Section */}
-                <motion.div variants={fadeInUp} style={{ marginTop: 'var(--space-2xl)' }}>
-                    <div style={{
-                        padding: 'var(--space-xl)',
-                        background: 'var(--color-surface)',
-                        backdropFilter: 'blur(var(--glass-blur))',
-                        WebkitBackdropFilter: 'blur(var(--glass-blur))',
-                        borderRadius: 'var(--radius-2xl)',
-                        border: '1px solid var(--color-border-subtle)',
-                        boxShadow: 'var(--shadow-lg)',
-                        textAlign: 'center'
-                    }}>
-                        <div style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: 'var(--space-sm)' }}>
-                            Results
+                {/* Main Bento Grid */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1.2fr 0.8fr',
+                    gridTemplateRows: 'auto 1fr',
+                    gap: 'var(--space-lg)',
+                    flex: 1
+                }}>
+                    {/* Track 1: Two-Track Approach */}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="glass"
+                        style={{
+                            gridRow: 'span 2',
+                            padding: 'var(--space-xl)',
+                            borderRadius: 'var(--radius-3xl)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 'var(--space-lg)',
+                            background: 'var(--color-surface)',
+                            border: '1px solid var(--color-border-subtle)'
+                        }}
+                    >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
+                            <div style={{ padding: '10px', background: 'var(--brand-red)15', borderRadius: '12px', color: 'var(--brand-red)' }}>
+                                <ExternalLink size={24} />
+                            </div>
+                            <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>Dual-Track Strategy</h3>
                         </div>
-                        <div style={{ fontSize: 'var(--font-size-4xl)', fontWeight: 'var(--font-weight-extrabold)', marginBottom: 'var(--space-xs)' }} className="gradient-text">
-                            9 Companies
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+                            <div style={{
+                                padding: 'var(--space-md)',
+                                background: 'var(--color-surface-elevated)',
+                                borderRadius: 'var(--radius-xl)',
+                                borderLeft: '4px solid var(--brand-red)',
+                                position: 'relative',
+                                overflow: 'hidden'
+                            }}>
+                                <strong style={{ display: 'block', fontSize: '1.1rem', color: 'var(--brand-red)', marginBottom: '4px' }}>1. Agency Partnerships</strong>
+                                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
+                                    Professional marketing firms delivering high-level strategy and execution.
+                                </p>
+                            </div>
+
+                            <div style={{
+                                padding: 'var(--space-md)',
+                                background: 'var(--color-surface-elevated)',
+                                borderRadius: 'var(--radius-xl)',
+                                borderLeft: '4px solid var(--brand-teal)',
+                                position: 'relative',
+                                overflow: 'hidden'
+                            }}>
+                                <strong style={{ display: 'block', fontSize: '1.1rem', color: 'var(--brand-teal)', marginBottom: '4px' }}>2. Dedicated Talent (T2H)</strong>
+                                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
+                                    Train-to-Hire marketing specialists embedded within company teams.
+                                </p>
+                            </div>
                         </div>
-                        <div style={{ fontSize: 'var(--font-size-lg)', color: 'var(--color-text-secondary)' }}>
-                            Supported (3 Gaza, 6 West Bank)
+
+                        <div style={{ marginTop: 'auto', padding: '1rem', background: 'rgba(31, 48, 54, 0.03)', borderRadius: '12px', border: '1px dashed var(--color-border-medium)' }}>
+                            <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', opacity: 0.6, letterSpacing: '1px', marginBottom: '4px' }}>Resource Model</div>
+                            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--color-text-primary)' }}>Bridging the gap between strategy and execution.</div>
                         </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+
+                    {/* Track 2: Scope Items */}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="glass"
+                        style={{
+                            padding: 'var(--space-xl)',
+                            borderRadius: 'var(--radius-3xl)',
+                            background: 'var(--color-surface)',
+                            border: '1px solid var(--color-border-subtle)'
+                        }}
+                    >
+                        <h3 style={{ margin: '0 0 var(--space-md)', fontSize: '1rem', fontWeight: 800, color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                            Scope of Services
+                        </h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-sm)' }}>
+                            {scope.map((item, idx) => (
+                                <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
+                                    <div style={{ color: 'var(--brand-teal)', display: 'flex' }}><item.icon size={16} /></div>
+                                    <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--color-text-secondary)' }}>{item.text}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Track 3: Impact Metrics */}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="glass-strong"
+                        whileHover={{ scale: 1.02 }}
+                        style={{
+                            padding: 'var(--space-xl)',
+                            borderRadius: 'var(--radius-3xl)',
+                            background: 'var(--gradient-primary)',
+                            color: 'white',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            position: 'relative',
+                            overflow: 'hidden',
+                            boxShadow: 'var(--shadow-lg)'
+                        }}
+                    >
+                        <div style={{ position: 'absolute', top: '-10%', right: '-10%', opacity: 0.1 }}>
+                            <Megaphone size={120} />
+                        </div>
+                        <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', opacity: 0.9, marginBottom: '4px' }}>Impact Delivered</div>
+                        <div style={{ fontSize: '4.5rem', fontWeight: 900, lineHeight: 1 }}>9</div>
+                        <div style={{ fontSize: '1.1rem', fontWeight: 700 }}>Companies Supported</div>
+                        <div style={{
+                            marginTop: 'var(--space-md)',
+                            padding: '4px 16px',
+                            background: 'rgba(255,255,255,0.2)',
+                            borderRadius: 'var(--radius-full)',
+                            fontSize: '0.85rem',
+                            fontWeight: 600,
+                            backdropFilter: 'blur(4px)'
+                        }}>
+                            3 Gaza • 6 West Bank
+                        </div>
+                    </motion.div>
+                </div>
             </motion.div>
-        </Slide >
+        </Slide>
     );
 }
 
