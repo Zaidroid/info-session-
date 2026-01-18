@@ -106,9 +106,12 @@ export function CapacityBuilding() {
 export function Marketing() {
     const scope = [
         { icon: Palette, text: 'Brand Strategy & Positioning' },
-        { icon: Megaphone, text: 'Campaigns & Creative Production' },
+        { icon: Search, text: 'Marketing Strategy' },
+        { icon: Globe, text: 'Social Media & Creative Production' },
         { icon: Search, text: 'SEO & Digital Visibility' },
-        { icon: Globe, text: 'Social Media & Market Presence' },
+        { icon: Users, text: 'Coaching & Training of Resources' },
+        { icon: Megaphone, text: 'Campaigns Management' },
+        { icon: ExternalLink, text: 'Campaign Sponsorship Support' },
     ];
 
     return (
@@ -148,13 +151,13 @@ export function Marketing() {
                         <div className="badge" style={{
                             background: 'var(--brand-teal)',
                             color: 'white',
-                            marginBottom: 'var(--space-md)',
+                            marginBottom: 'var(--space-sm)',
                             boxShadow: '0 4px 15px rgba(48, 157, 196, 0.3)'
                         }} >
                             Visibility & Identity
                         </div>
                         <h2 style={{
-                            fontSize: 'clamp(2.5rem, 6vmin, 4rem)',
+                            fontSize: 'clamp(2.5rem, 6vmin, 3.8rem)',
                             fontWeight: 900,
                             margin: 0,
                             letterSpacing: '-0.02em',
@@ -166,10 +169,10 @@ export function Marketing() {
                             fontSize: 'var(--font-size-md)',
                             margin: 'var(--space-sm) 0 0',
                             color: 'var(--color-text-secondary)',
-                            fontWeight: 300,
+                            fontWeight: 400,
                             maxWidth: '600px'
                         }}>
-                            Elevating the global digital presence of Palestinian tech companies through professional support and talent.
+                            Improve the visibility and visual identity of companies through elite marketing interventions.
                         </p>
                     </motion.div>
 
@@ -184,11 +187,12 @@ export function Marketing() {
                         }}
                     >
                         <h4 style={{ textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.1em', color: 'var(--brand-teal)', margin: '0 0 8px' }}>
-                            Strategic Focus
+                            Sub-Interventions
                         </h4>
-                        <p style={{ margin: 0, fontSize: '1rem', lineHeight: 1.5, fontWeight: 500, color: 'var(--color-text-primary)' }}>
-                            Strengthening market readiness with dedicated agency support and in-house marketing experts.
-                        </p>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-text-primary)' }}>• Contracting Marketing Agency</div>
+                            <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-text-primary)' }}>• Placing Marketing Resources (TTH)</div>
+                        </div>
                     </motion.div>
                 </div>
 
@@ -200,7 +204,7 @@ export function Marketing() {
                     gap: 'var(--space-lg)',
                     flex: 1
                 }}>
-                    {/* Track 1: Two-Track Approach */}
+                    {/* Track 1: Scope Items */}
                     <motion.div
                         variants={fadeInUp}
                         className="glass"
@@ -210,75 +214,59 @@ export function Marketing() {
                             borderRadius: 'var(--radius-3xl)',
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: 'var(--space-lg)',
+                            gap: 'var(--space-md)',
                             background: 'var(--color-surface)',
                             border: '1px solid var(--color-border-subtle)'
                         }}
                     >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
-                            <div style={{ padding: '10px', background: 'var(--brand-red)15', borderRadius: '12px', color: 'var(--brand-red)' }}>
-                                <ExternalLink size={24} />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)', marginBottom: 'var(--space-xs)' }}>
+                            <div style={{ padding: '8px', background: 'var(--brand-teal)15', borderRadius: '10px', color: 'var(--brand-teal)' }}>
+                                <Palette size={20} />
                             </div>
-                            <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>Dual-Track Strategy</h3>
+                            <h3 style={{ margin: 0, fontSize: '1.3rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>Scope of Work</h3>
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-                            <div style={{
-                                padding: 'var(--space-md)',
-                                background: 'var(--color-surface-elevated)',
-                                borderRadius: 'var(--radius-xl)',
-                                borderLeft: '4px solid var(--brand-red)',
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}>
-                                <strong style={{ display: 'block', fontSize: '1.1rem', color: 'var(--brand-red)', marginBottom: '4px' }}>1. Agency Partnerships</strong>
-                                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
-                                    Professional marketing firms delivering high-level strategy and execution.
-                                </p>
-                            </div>
-
-                            <div style={{
-                                padding: 'var(--space-md)',
-                                background: 'var(--color-surface-elevated)',
-                                borderRadius: 'var(--radius-xl)',
-                                borderLeft: '4px solid var(--brand-teal)',
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}>
-                                <strong style={{ display: 'block', fontSize: '1.1rem', color: 'var(--brand-teal)', marginBottom: '4px' }}>2. Dedicated Talent (T2H)</strong>
-                                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
-                                    Train-to-Hire marketing specialists embedded within company teams.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div style={{ marginTop: 'auto', padding: '1rem', background: 'rgba(31, 48, 54, 0.03)', borderRadius: '12px', border: '1px dashed var(--color-border-medium)' }}>
-                            <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', opacity: 0.6, letterSpacing: '1px', marginBottom: '4px' }}>Resource Model</div>
-                            <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--color-text-primary)' }}>Bridging the gap between strategy and execution.</div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-sm)' }}>
+                            {scope.map((item, idx) => (
+                                <div key={idx} style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: 'var(--space-md)',
+                                    padding: '10px 14px',
+                                    background: 'var(--color-surface-elevated)',
+                                    borderRadius: '12px',
+                                    border: '1px solid var(--color-border-subtle)'
+                                }}>
+                                    <div style={{ color: 'var(--brand-teal)', display: 'flex' }}><item.icon size={16} /></div>
+                                    <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--color-text-primary)' }}>{item.text}</span>
+                                </div>
+                            ))}
                         </div>
                     </motion.div>
 
-                    {/* Track 2: Scope Items */}
+                    {/* Track 2: Dual Track Visualization (Minimized) */}
                     <motion.div
                         variants={fadeInUp}
                         className="glass"
                         style={{
-                            padding: 'var(--space-xl)',
+                            padding: 'var(--space-lg)',
                             borderRadius: 'var(--radius-3xl)',
                             background: 'var(--color-surface)',
-                            border: '1px solid var(--color-border-subtle)'
+                            border: '1px solid var(--color-border-subtle)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center'
                         }}
                     >
-                        <h3 style={{ margin: '0 0 var(--space-md)', fontSize: '1rem', fontWeight: 800, color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                            Scope of Services
-                        </h3>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-sm)' }}>
-                            {scope.map((item, idx) => (
-                                <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
-                                    <div style={{ color: 'var(--brand-teal)', display: 'flex' }}><item.icon size={16} /></div>
-                                    <span style={{ fontSize: '0.9rem', fontWeight: 500, color: 'var(--color-text-secondary)' }}>{item.text}</span>
-                                </div>
-                            ))}
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)' }}>
+                            <div style={{ textAlign: 'center', padding: 'var(--space-sm)' }}>
+                                <div style={{ color: 'var(--brand-red)', marginBottom: '4px' }}><ExternalLink size={24} /></div>
+                                <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>Agency<br />Driven</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: 'var(--space-sm)', borderLeft: '1px solid var(--color-border-subtle)' }}>
+                                <div style={{ color: 'var(--brand-teal)', marginBottom: '4px' }}><Users size={24} /></div>
+                                <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>TTH<br />Talent</div>
+                            </div>
                         </div>
                     </motion.div>
 
@@ -306,18 +294,18 @@ export function Marketing() {
                             <Megaphone size={120} />
                         </div>
                         <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', opacity: 0.9, marginBottom: '4px' }}>Impact Delivered</div>
-                        <div style={{ fontSize: '4.5rem', fontWeight: 900, lineHeight: 1 }}>9</div>
+                        <div style={{ fontSize: '5rem', fontWeight: 900, lineHeight: 1 }}>9</div>
                         <div style={{ fontSize: '1.1rem', fontWeight: 700 }}>Companies Supported</div>
                         <div style={{
                             marginTop: 'var(--space-md)',
                             padding: '4px 16px',
                             background: 'rgba(255,255,255,0.2)',
                             borderRadius: 'var(--radius-full)',
-                            fontSize: '0.85rem',
-                            fontWeight: 600,
+                            fontSize: '0.9rem',
+                            fontWeight: 700,
                             backdropFilter: 'blur(4px)'
                         }}>
-                            3 Gaza • 6 West Bank
+                            3 GS • 6 WB
                         </div>
                     </motion.div>
                 </div>
