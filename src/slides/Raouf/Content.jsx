@@ -584,14 +584,27 @@ export function WorkingSpaces() {
                                         <span style={{ fontSize: '1rem', fontWeight: 900, color: 'var(--brand-teal)' }}>{m.v26} <small style={{ opacity: 0.5, fontSize: '0.7rem' }}>{m.unit}</small></span>
                                     </div>
                                     <div style={{ height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '6px', overflow: 'hidden', position: 'relative' }}>
-                                        {/* 2025 Base */}
-                                        <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: `${(m.v25 / m.max) * 100}%`, background: 'rgba(255,255,255,0.15)', borderRadius: '6px', zIndex: 1 }} />
-                                        {/* 2026 Target */}
+                                        {/* 2025 Base - Now on top (zIndex 2) and animated */}
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${(m.v25 / m.max) * 100}%` }}
+                                            transition={{ duration: 1.2, delay: 1.0 + (idx * 0.1), ease: 'easeOut' }}
+                                            style={{
+                                                position: 'absolute',
+                                                left: 0,
+                                                top: 0,
+                                                bottom: 0,
+                                                background: 'rgba(255,255,255,0.3)',
+                                                borderRadius: '6px',
+                                                zIndex: 2
+                                            }}
+                                        />
+                                        {/* 2026 Target - Below (zIndex 1) so growth shows as extension */}
                                         <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: `${(m.v26 / m.max) * 100}%` }}
                                             transition={{ duration: 1.5, delay: 1.2 + (idx * 0.1), ease: 'easeOut' }}
-                                            style={{ height: '100%', background: m.color, borderRadius: '6px', position: 'relative', zIndex: 2 }}
+                                            style={{ height: '100%', background: m.color, borderRadius: '6px', position: 'relative', zIndex: 1 }}
                                         />
                                     </div>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '6px' }}>

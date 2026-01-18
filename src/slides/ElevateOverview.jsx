@@ -86,58 +86,52 @@ export default function ElevateOverview() {
                     {pillars.map((pillar, index) => (
                         <motion.div
                             key={index}
-                            variants={fadeInUp}
-                            animate={{
-                                y: [0, -15, 0],
+                            variants={fadeInUp} // Use the standard variant
+                            whileHover={{
+                                scale: 1.02,
+                                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                                transition: { duration: 0.2 }
                             }}
-                            transition={{
-                                duration: 6,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                                delay: pillar.delay
-                            }}
-                            whileHover={{ scale: 1.05, translateY: -10, transition: { duration: 0.3 } }}
                             className="glass"
                             style={{
-                                padding: '3rem 2rem',
-                                borderRadius: '32px',
+                                padding: '3rem',
+                                borderRadius: '24px',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                alignItems: 'center',
-                                textAlign: 'center',
+                                alignItems: 'flex-start',
+                                justifyContent: 'center',
+                                textAlign: 'left',
                                 border: '1px solid rgba(255,255,255,0.08)',
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+                                // No colored top border
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                                 position: 'relative',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                height: '100%',
+                                transition: 'box-shadow 0.3s ease'
                             }}
                         >
-                            {/* Top glow */}
+                            {/* Subtle colored accent glow in background instead of border */}
                             <div style={{
                                 position: 'absolute',
-                                top: '-50%',
-                                left: '50%',
-                                transform: 'translateX(-50%)',
+                                top: 0,
+                                left: 0,
                                 width: '100%',
-                                height: '100%',
-                                background: `radial-gradient(circle, ${pillar.color}20 0%, transparent 70%)`,
-                                pointerEvents: 'none'
+                                height: '5px',
+                                background: `linear-gradient(90deg, ${pillar.color}, transparent)`,
+                                opacity: 0.8
                             }} />
 
+                            {/* Accent Glow Blob */}
                             <div style={{
-                                width: '80px',
-                                height: '80px',
-                                borderRadius: '24px',
-                                background: `rgba(255,255,255,0.05)`,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                marginBottom: '2rem',
-                                color: pillar.color,
-                                border: `1px solid ${pillar.color}40`,
-                                boxShadow: `0 0 20px ${pillar.color}20`
-                            }}>
-                                <pillar.icon size={40} />
-                            </div>
+                                position: 'absolute',
+                                top: '-20px',
+                                right: '-20px',
+                                width: '150px',
+                                height: '150px',
+                                background: `radial-gradient(circle, ${pillar.color}20 0%, transparent 70%)`,
+                                pointerEvents: 'none',
+                                filter: 'blur(20px)'
+                            }} />
 
                             <h3 style={{
                                 fontSize: '2rem',
@@ -148,7 +142,7 @@ export default function ElevateOverview() {
                                 {pillar.title}
                             </h3>
                             <div style={{
-                                fontSize: '1rem',
+                                fontSize: '0.9rem',
                                 fontWeight: 700,
                                 textTransform: 'uppercase',
                                 letterSpacing: '1px',
@@ -158,7 +152,7 @@ export default function ElevateOverview() {
                             }}>
                                 {pillar.subtitle}
                             </div>
-                            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>
+                            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, margin: 0 }}>
                                 {pillar.description}
                             </p>
                         </motion.div>

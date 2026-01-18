@@ -136,7 +136,7 @@ export function Individuals3() {
                     <FeatureCard title="Technical Skills" delay={0.1}>
                         <div style={{ marginTop: 'var(--space-md)' }}>
                             <div style={{ color: 'var(--color-accent-secondary)', fontWeight: 'bold', marginBottom: 'var(--space-sm)', fontSize: 'var(--font-size-sm)', textTransform: 'uppercase' }}>Core Training</div>
-                            <ul style={{ listStyle: 'none', padding: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, textAlign: 'center' }}>
+                            <ul style={{ listStyle: 'none', padding: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, textAlign: 'left', margin: 0 }}>
                                 <li>Intensive Bootcamps</li>
                                 <li>Advanced Courses</li>
                                 <li>Industry Certifications</li>
@@ -147,7 +147,7 @@ export function Individuals3() {
                     <FeatureCard title="Employability" delay={0.2}>
                         <div style={{ marginTop: 'var(--space-md)' }}>
                             <div style={{ color: 'var(--color-accent-secondary)', fontWeight: 'bold', marginBottom: 'var(--space-sm)', fontSize: 'var(--font-size-sm)', textTransform: 'uppercase' }}>Market Readiness</div>
-                            <ul style={{ listStyle: 'none', padding: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, textAlign: 'center' }}>
+                            <ul style={{ listStyle: 'none', padding: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, textAlign: 'left', margin: 0 }}>
                                 <li>Soft Skills & English</li>
                                 <li>Remote Work Best Practices</li>
                                 <li>Career Coaching</li>
@@ -158,7 +158,7 @@ export function Individuals3() {
                     <FeatureCard title="Community" delay={0.3}>
                         <div style={{ marginTop: 'var(--space-md)' }}>
                             <div style={{ color: 'var(--color-accent-secondary)', fontWeight: 'bold', marginBottom: 'var(--space-sm)', fontSize: 'var(--font-size-sm)', textTransform: 'uppercase' }}>Network & Support</div>
-                            <ul style={{ listStyle: 'none', padding: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, textAlign: 'center' }}>
+                            <ul style={{ listStyle: 'none', padding: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, textAlign: 'left', margin: 0 }}>
                                 <li>Mentorship Matching</li>
                                 <li>Alumni Network</li>
                                 <li>Peer Learning</li>
