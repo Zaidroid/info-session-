@@ -76,7 +76,7 @@ export function MarketAccessGrid() {
                         </ul>
                         <div style={{ marginTop: 'auto', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-border-subtle)' }}>
                             <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>
-                                5 Companies
+                                8 Companies
                             </strong>
                         </div>
                     </FeatureCard>
@@ -188,19 +188,12 @@ export function ElevateBridgeModule() {
 import { Globe, TrendingUp, Compass, ShieldCheck, DollarSign, Building2 } from 'lucide-react';
 
 export function MarketAccessImpact() {
-    const metrics2024 = [
-        { label: 'Strategic Outreach', value: 35, suffix: '+', color: 'var(--color-accent-primary)' },
-        { label: 'Companies Supported', value: 20, suffix: '+', color: 'var(--color-accent-secondary)' },
+    const impactMetrics = [
+        { label: 'C-Suite Mentoring', v24: 9, v25: 11, unit: 'Companies', icon: Compass, color: 'var(--brand-teal)', max: 15 },
+        { label: 'Legal Support', v24: 5, v25: 7, unit: 'Companies', icon: ShieldCheck, color: 'var(--brand-teal)', max: 10 },
+        { label: 'Intl. Conferences', v24: 6, v25: 8, unit: 'Companies', icon: Globe, color: 'var(--brand-teal)', max: 10 },
+        { label: 'Total Supported', v24: 20, v25: 26, unit: 'Entities', icon: Building2, color: 'var(--brand-teal)', max: 30 },
     ];
-
-    const metrics2025 = [
-        { label: 'Global Conferences', value: 3, suffix: '', icon: Globe, isNew: true },
-        { label: 'Companies Supported', value: 40, suffix: '+', icon: Building2, color: 'var(--color-accent-secondary)', sub: '60+ Total' },
-        { label: 'C-Suite Mentoring', value: 11, suffix: '', icon: Compass, isNew: true },
-        { label: 'Legal Entities', value: 7, suffix: '', icon: ShieldCheck, isNew: true },
-    ];
-
-    const outreachGrowth = 140;
 
     return (
         <Slide>
@@ -214,7 +207,7 @@ export function MarketAccessImpact() {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'radial-gradient(circle at 70% 30%, rgba(222, 99, 54, 0.08) 0%, transparent 60%)',
+                    background: 'radial-gradient(circle at 70% 30%, rgba(48, 157, 196, 0.1) 0%, transparent 60%)',
                 }} />
                 <FloatingBackground images={zaidImages} />
             </div>
@@ -227,14 +220,14 @@ export function MarketAccessImpact() {
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                padding: 'var(--space-2xl) var(--space-3xl)'
+                padding: 'var(--space-2xl) var(--space-4xl)'
             }}>
                 {/* Header */}
                 <div style={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    alignItems: 'flex-end',
-                    marginBottom: 'var(--space-xl)'
+                    alignItems: 'flex-start',
+                    marginBottom: 'var(--space-2xl)'
                 }}>
                     <div>
                         <motion.div
@@ -244,7 +237,7 @@ export function MarketAccessImpact() {
                             className="badge badge-primary"
                             style={{ marginBottom: 'var(--space-sm)' }}
                         >
-                            Market Access Impact
+                            Impact Progress
                         </motion.div>
                         <motion.h2
                             initial={{ opacity: 0, x: -20 }}
@@ -257,162 +250,106 @@ export function MarketAccessImpact() {
                                 lineHeight: 1.1
                             }}
                         >
-                            Bridging to <span className="gradient-text">Global Markets</span>
+                            Scaling <span className="gradient-text">Market Access</span>
                         </motion.h2>
                     </div>
 
-                    {/* Growth Badge */}
-                    <motion.div
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
-                        className="glass"
-                        style={{
-                            padding: 'var(--space-md) var(--space-xl)',
-                            borderRadius: 'var(--radius-xl)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 'var(--space-md)',
-                            border: '1px solid rgba(255,255,255,0.08)',
-                            background: 'rgba(16, 185, 129, 0.05)'
-                        }}
-                    >
-                        <TrendingUp size={32} style={{ color: 'var(--color-success)' }} />
-                        <div>
-                            <div style={{ fontSize: '1.8rem', fontWeight: 900, color: 'var(--color-success)', lineHeight: 1 }}>
-                                +{outreachGrowth}%
-                            </div>
-                            <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', opacity: 0.7, fontWeight: 700 }}>
-                                Network Growth
-                            </div>
+                    <div style={{
+                        background: 'rgba(255,255,255,0.05)',
+                        padding: '12px 20px',
+                        borderRadius: '16px',
+                        border: '1px solid var(--color-border-subtle)',
+                        display: 'flex',
+                        gap: '24px'
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <div style={{ width: '12px', height: '12px', background: 'rgba(255,255,255,0.4)', borderRadius: '3px' }} />
+                            <span style={{ fontSize: '0.75rem', fontWeight: 700, opacity: 0.7 }}>2024 Baseline</span>
                         </div>
-                    </motion.div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <div style={{ width: '12px', height: '12px', background: 'var(--brand-teal)', borderRadius: '3px' }} />
+                            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--brand-teal)' }}>2025 Expansion</span>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Main Grid */}
+                {/* Progress Grid */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'minmax(300px, 1fr) 1.5fr',
-                    gap: 'var(--space-2xl)',
-                    flex: 1
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gap: 'var(--space-xl)',
+                    flex: 1,
+                    alignContent: 'center'
                 }}>
-                    {/* 2024 Column (Baseline) */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="glass"
-                        style={{
-                            padding: 'var(--space-xl)',
-                            borderRadius: 'var(--radius-2xl)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 'var(--space-lg)',
-                            border: '1px solid rgba(255,255,255,0.03)',
-                            background: 'rgba(255,255,255,0.01)' // Subtle background
-                        }}
-                    >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 'var(--space-md)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                            <h3 style={{ fontSize: '1.2rem', margin: 0, fontWeight: 700, opacity: 0.6 }}>2024 Baseline</h3>
-                            <div className="badge" style={{ background: 'rgba(255,255,255,0.05)', opacity: 0.6 }}>Elevate 1.0</div>
-                        </div>
-
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)', justifyContent: 'center', flex: 1 }}>
-                            {metrics2024.map((m, i) => (
-                                <div key={m.label}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                                        <span style={{ fontSize: '0.95rem', color: 'var(--color-text-secondary)' }}>{m.label}</span>
-                                        <span style={{ fontWeight: 800, fontSize: '1.1rem' }}>{m.value}{m.suffix}</span>
+                    {impactMetrics.map((m, idx) => (
+                        <motion.div
+                            key={m.label}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 + (idx * 0.1), duration: 0.7 }}
+                            className="glass"
+                            style={{
+                                padding: 'var(--space-xl)',
+                                borderRadius: 'var(--radius-3xl)',
+                                border: '1px solid var(--color-border-subtle)',
+                                background: 'rgba(255,255,255,0.02)'
+                            }}
+                        >
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'flex-end' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <div style={{ padding: '10px', background: 'rgba(48, 157, 196, 0.1)', borderRadius: '12px' }}>
+                                        <m.icon size={20} color="var(--brand-teal)" />
                                     </div>
-                                    <div style={{ height: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', overflow: 'hidden' }}>
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            animate={{ width: `${(m.value / 60) * 100}%` }} // Adjusted scale
-                                            transition={{ duration: 1, delay: 0.8 + (i * 0.1) }}
-                                            style={{ height: '100%', background: m.color || 'var(--color-text-tertiary)', borderRadius: '4px' }}
-                                        />
+                                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                        <span style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '1px' }}>{m.label}</span>
+                                        <span style={{ fontSize: '1.4rem', fontWeight: 900, color: 'white' }}>{m.v25} <small style={{ opacity: 0.6, fontSize: '0.8rem' }}>{m.unit}</small></span>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                    </motion.div>
+                                <div style={{ textAlign: 'right' }}>
+                                    <span style={{
+                                        fontSize: '0.85rem',
+                                        color: 'var(--brand-teal)',
+                                        fontWeight: 900,
+                                        background: 'rgba(48, 157, 196, 0.1)',
+                                        padding: '4px 10px',
+                                        borderRadius: '8px'
+                                    }}>
+                                        +{Math.round(((m.v25 - m.v24) / m.v24) * 100)}% Growth
+                                    </span>
+                                </div>
+                            </div>
 
-                    {/* 2025 Column (Expansion) */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className="glass"
-                        style={{
-                            padding: 'var(--space-xl)',
-                            borderRadius: 'var(--radius-2xl)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 'var(--space-lg)',
-                            border: '1px solid rgba(222, 99, 54, 0.2)', // Accent border
-                            background: 'linear-gradient(145deg, rgba(222, 99, 54, 0.03) 0%, rgba(255,255,255,0.02) 100%)',
-                            position: 'relative',
-                            overflow: 'hidden'
-                        }}
-                    >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 'var(--space-md)', borderBottom: '1px solid rgba(222, 99, 54, 0.1)' }}>
-                            <h3 style={{ fontSize: '1.5rem', margin: 0, fontWeight: 800 }}>2025 Expansion</h3>
-                            <div className="badge" style={{ background: 'rgba(222, 99, 54, 0.15)', color: 'var(--brand-orange)' }}>Elevate 2.0</div>
-                        </div>
-
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: '1fr 1fr',
-                            gap: 'var(--space-lg)',
-                            flex: 1,
-                            alignContent: 'center'
-                        }}>
-                            {metrics2025.map((m, i) => (
+                            <div style={{ height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', overflow: 'hidden', position: 'relative' }}>
+                                {/* 2025 Target - The full bar in Branded Teal */}
                                 <motion.div
-                                    key={m.label}
-                                    variants={fadeInUp}
-                                    whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.05)' }}
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `${(m.v25 / m.max) * 100}%` }}
+                                    transition={{ duration: 1.5, delay: 0.8 + (idx * 0.1), ease: 'easeOut' }}
+                                    style={{ height: '100%', background: 'var(--brand-teal)', borderRadius: '10px', position: 'relative', zIndex: 1 }}
+                                />
+                                {/* 2024 Baseline - Overlay at the start */}
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `${(m.v24 / m.max) * 100}%` }}
+                                    transition={{ duration: 1.2, delay: 0.6 + (idx * 0.1), ease: 'easeOut' }}
                                     style={{
-                                        background: 'rgba(255,255,255,0.02)',
-                                        padding: '1.2rem',
-                                        borderRadius: 'var(--radius-xl)',
-                                        border: m.isNew ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(255,255,255,0.05)',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'space-between',
-                                        position: 'relative'
+                                        position: 'absolute',
+                                        left: 0,
+                                        top: 0,
+                                        bottom: 0,
+                                        background: 'rgba(255,255,255,0.4)',
+                                        borderRadius: '10px',
+                                        zIndex: 2,
+                                        borderRight: '1px solid rgba(0,0,0,0.2)'
                                     }}
-                                >
-                                    {m.isNew && (
-                                        <div style={{
-                                            position: 'absolute', top: 10, right: 10,
-                                            fontSize: '9px', fontWeight: 800,
-                                            padding: '2px 6px', borderRadius: '4px',
-                                            background: 'var(--color-success)', color: '#000'
-                                        }}>
-                                            NEW
-                                        </div>
-                                    )}
-
-                                    <div style={{ marginBottom: 'var(--space-sm)', color: m.color || 'var(--color-text-primary)' }}>
-                                        {m.icon && <m.icon size={24} />}
-                                    </div>
-
-                                    <div>
-                                        <div style={{ fontSize: '2.2rem', fontWeight: 900, lineHeight: 1, marginBottom: '4px' }}>
-                                            {m.value}<span style={{ fontSize: '1rem', opacity: 0.6 }}>{m.suffix}</span>
-                                        </div>
-                                        <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-secondary)', lineHeight: 1.2 }}>
-                                            {m.label}
-                                        </div>
-                                        {m.sub && (
-                                            <div style={{ fontSize: '0.75rem', marginTop: '4px', color: 'var(--color-text-tertiary)' }}>{m.sub}</div>
-                                        )}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
+                                />
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
+                                <span style={{ fontSize: '0.7rem', fontWeight: 700, opacity: 0.5 }}>2024 Baseline: {m.v24}</span>
+                                <span style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--brand-teal)' }}>2025 Goal: {m.v25}</span>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </Slide>

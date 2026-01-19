@@ -71,8 +71,8 @@ export default function ElevateOverview() {
                     <h2 style={{ fontSize: 'clamp(3rem, 6vmin, 5rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '1rem' }}>
                         The <span className="gradient-text">Elevate</span> Program
                     </h2>
-                    <p style={{ fontSize: '1.4rem', color: 'var(--color-text-secondary)', maxWidth: '700px', margin: '0 auto' }}>
-                        A comprehensive ecosystem designed to accelerate tech growth in Palestine.
+                    <p style={{ fontSize: '1.4rem', color: 'var(--color-text-secondary)', maxWidth: '750px', margin: '0 auto' }}>
+                        A comprehensive program designed to support and scale established tech enterprises in Palestine.
                     </p>
                 </motion.div>
 
@@ -134,7 +134,7 @@ export default function ElevateOverview() {
                             }} />
 
                             <h3 style={{
-                                fontSize: '2rem',
+                                fontSize: '1.75rem',
                                 fontWeight: 800,
                                 marginBottom: '0.5rem',
                                 color: 'var(--color-text-primary)'

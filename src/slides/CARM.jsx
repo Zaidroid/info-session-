@@ -101,7 +101,7 @@ const CARM = () => {
                         margin: '0 0 var(--space-md) 0',
                         lineHeight: 'var(--line-height-tight)'
                     }}>
-                        We Are Here <span className="gradient-text">To Listen</span>
+                        CARM: We Are Here <span className="gradient-text">To Listen</span>
                     </h2>
                     <p style={{
                         fontSize: 'var(--font-size-lg)',

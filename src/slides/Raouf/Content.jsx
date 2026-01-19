@@ -25,89 +25,186 @@ export function CapacityBuilding() {
                 variants={containerVariants}
                 style={{ width: '100%', height: '100%' }}
             >
-                <motion.div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 'var(--space-2xl)', flexDirection: 'column' }}>
+                <motion.div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 'var(--space-lg)', flexDirection: 'column' }}>
                     {/* Elevate Logo Concept */}
-                    <motion.h2 variants={fadeInUp} style={{ fontSize: '4rem', fontWeight: '900', letterSpacing: '-2px', lineHeight: 1, textAlign: 'center' }}>
+                    <motion.h2 variants={fadeInUp} style={{ fontSize: '3rem', fontWeight: '900', letterSpacing: '-2px', lineHeight: 1, textAlign: 'center' }}>
                         Elevate <span className="gradient-text">2.0</span>
-                        <div style={{ fontSize: '2.5rem', marginTop: 'var(--space-xs)', color: 'var(--color-text-secondary)' }}>2025</div>
+                        <div style={{ fontSize: '1.8rem', marginTop: 'var(--space-xs)', color: 'var(--color-text-secondary)' }}>2025</div>
                     </motion.h2>
                 </motion.div>
 
-                <div className="grid-3">
+                <div className="grid-3" style={{ gap: 'var(--space-md)' }}>
                     <FeatureCard
                         title="Train-to-Hire"
                         description="Financial support for intern stipends to onboard fresh, pre-vetted talent."
                         delay={0.1}
                     >
-                        <div style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)' }}>
-                            <div style={{ marginBottom: 'var(--space-sm)' }}>
-                                <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>40 Interns</strong>
-                                <div style={{ color: 'var(--color-text-tertiary)', fontSize: 'var(--font-size-xs)' }}>
-                                    Placed in 10 companies (20 WB, 20 Gaza)
+                        <div style={{ marginTop: 'var(--space-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                                <div>
+                                    <strong className="gradient-text" style={{ fontSize: '1.8rem', fontWeight: 900, lineHeight: 1 }}>38</strong>
+                                    <div style={{ fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Total Interns</div>
+                                </div>
+                                <div style={{ display: 'flex', gap: '8px' }}>
+                                    <div style={{ textAlign: 'center' }}>
+                                        <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>18</div>
+                                        <div style={{ fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', opacity: 1, color: 'var(--color-text-secondary)' }}>WB</div>
+                                    </div>
+                                    <div style={{ width: '1px', background: 'rgba(255,255,255,0.1)' }} />
+                                    <div style={{ textAlign: 'center' }}>
+                                        <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>20</div>
+                                        <div style={{ fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', opacity: 1, color: 'var(--color-text-secondary)' }}>Gaza</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div style={{ marginBottom: 'var(--space-sm)', padding: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '8px' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                                    <span>West Bank Hiring:</span>
-                                    <strong style={{ color: 'var(--color-accent-secondary)' }}>75%</strong>
+
+                            {/* Hiring Performance Highlights - High Contrast & Prominent */}
+                            <div style={{
+                                padding: '16px 12px',
+                                background: 'rgba(16, 185, 129, 0.1)',
+                                borderRadius: '14px',
+                                border: '1px solid rgba(16, 185, 129, 0.2)',
+                                textAlign: 'center'
+                            }}>
+                                <div style={{ fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', opacity: 0.7, color: 'var(--color-success)', marginBottom: '4px' }}>
+                                    Hiring Success Rate
                                 </div>
-                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                    <span>Gaza Hiring:</span>
-                                    <strong style={{ color: 'var(--color-accent-primary)' }}>30%</strong>
+                                <div style={{ fontSize: '2.2rem', fontWeight: 950, color: 'var(--color-success)', lineHeight: 1, marginBottom: '12px' }}>
+                                    55.2%
+                                </div>
+
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    gap: '16px',
+                                    borderTop: '1px solid rgba(255,255,255,0.1)',
+                                    paddingTop: '10px'
+                                }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <span style={{ fontSize: '0.75rem', fontWeight: 800, opacity: 1, color: 'var(--color-text-secondary)' }}>WB:</span>
+                                        <span style={{ fontSize: '1rem', fontWeight: 800 }}>83.3%</span>
+                                    </div>
+                                    <div style={{ width: '1px', background: 'rgba(255,255,255,0.1)' }} />
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                        <span style={{ fontSize: '0.75rem', fontWeight: 800, opacity: 1, color: 'var(--color-text-secondary)' }}>Gaza:</span>
+                                        <span style={{ fontSize: '1rem', fontWeight: 800 }}>30%</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)', marginTop: 'var(--space-md)' }}>
-                                ODOO, ASP.NET, Angular, Blockchain, Cybersec, UI/UX
+
+                            <div style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                gap: '4px',
+                                fontSize: '0.6rem',
+                                fontWeight: 600,
+                                opacity: 0.5
+                            }}>
+                                {['ODOO', 'ASP.NET', 'ANGULAR', 'SAP', 'UI/UX'].map(tag => (
+                                    <span key={tag} style={{ padding: '2px 6px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.05)' }}>{tag}</span>
+                                ))}
                             </div>
                         </div>
-                    </FeatureCard>
+                    </FeatureCard >
 
                     <FeatureCard
                         title="Upskilling"
                         description="Covering training costs for existing staff to meet evolving market demands."
                         delay={0.2}
                     >
-                        <div style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)' }}>
-                            <div style={{ marginBottom: 'var(--space-md)' }}>
-                                <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>81 Employees</strong>
-                                <div style={{ color: 'var(--color-text-tertiary)', fontSize: 'var(--font-size-xs)' }}>
-                                    From 17 companies
+                        <div style={{ marginTop: 'var(--space-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
+                            {/* Primary Impact Stats */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                                <div>
+                                    <strong className="gradient-text" style={{ fontSize: '1.8rem', fontWeight: 900, lineHeight: 1 }}>81</strong>
+                                    <div style={{ fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)', marginTop: '4px' }}>Employees Trained</div>
+                                </div>
+                                <div style={{ textAlign: 'right' }}>
+                                    <div style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--color-text-primary)' }}>17</div>
+                                    <div style={{ fontSize: '0.6rem', fontWeight: 800, textTransform: 'uppercase', opacity: 1, color: 'var(--color-text-secondary)' }}>Companies</div>
                                 </div>
                             </div>
-                            <ul style={{ fontSize: 'var(--font-size-xs)', marginTop: 'var(--space-sm)' }}>
-                                <li>Cloud Architecture & DevOps</li>
-                                <li>Communication & Time Management</li>
-                                <li>Digital Marketing & Campaign Management</li>
-                            </ul>
+
+                            {/* Training Highlights Box */}
+                            <div style={{
+                                padding: '12px',
+                                background: 'linear-gradient(135deg, rgba(222, 99, 54, 0.08) 0%, rgba(222, 99, 54, 0.04) 100%)',
+                                borderRadius: '12px',
+                                border: '1px solid rgba(222, 99, 54, 0.15)'
+                            }}>
+                                <div style={{ fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', opacity: 0.7, color: 'var(--brand-orange)', marginBottom: '8px', textAlign: 'center' }}>
+                                    Core Competencies
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                                    {[
+                                        'Cloud Architecture & DevOps',
+                                        'Digital Marketing Strategy',
+                                        'Soft Skills & Management'
+                                    ].map(item => (
+                                        <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                            <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--brand-orange)' }} />
+                                            <span style={{ fontSize: '0.75rem', fontWeight: 600, opacity: 0.9 }}>{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                gap: '4px',
+                                fontSize: '0.6rem',
+                                fontWeight: 600,
+                                opacity: 0.5
+                            }}>
+                                {['AWS', 'AZURE', 'SEO', 'PMP', 'AGILE'].map(tag => (
+                                    <span key={tag} style={{ padding: '2px 6px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.05)' }}>{tag}</span>
+                                ))}
+                            </div>
                         </div>
                     </FeatureCard>
 
                     <FeatureCard
                         title="Talent Recovery"
-                        description="Supporting Gaza-based companies by covering salaries to recover war-affected employees."
+                        description="Covering salaries to recover war-affected employees in Gaza."
                         highlighted={true}
-                        highlightLabel="Gaza Specific"
+                        highlightLabel="Gaza Only"
                         delay={0.3}
                     >
-                        <div
-                            style={{
-                                marginTop: 'var(--space-md)',
-                                padding: 'var(--space-md)',
+                        <div style={{ marginTop: 'var(--space-sm)', display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+                            {/* Impact Narrative Box */}
+                            <div style={{
+                                padding: '16px 12px',
                                 background: 'rgba(0, 210, 170, 0.1)',
-                                borderRadius: 'var(--radius-lg)',
-                                fontSize: 'var(--font-size-sm)',
-                            }}
-                        >
-                            <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)' }}>
-                                Helping retain former talents at Gaza companies
+                                borderRadius: '14px',
+                                border: '1px solid rgba(0, 210, 170, 0.2)',
+                                textAlign: 'center'
+                            }}>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'white', lineHeight: 1.5, opacity: 0.9 }}>
+                                    "Helping Gaza companies <strong>recover and retain</strong> critical talent affected by the ongoing crisis."
+                                </div>
+                            </div>
+
+                            <div style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                gap: '4px',
+                                fontSize: '0.6rem',
+                                fontWeight: 700,
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.5px'
+                            }}>
+                                <span style={{ padding: '2px 8px', background: 'rgba(0, 210, 170, 0.2)', color: 'var(--color-success)', borderRadius: '4px' }}>Retention Support</span>
+                                <span style={{ padding: '2px 8px', background: 'rgba(0, 210, 170, 0.2)', color: 'var(--color-success)', borderRadius: '4px' }}>Sustainability</span>
+                                <span style={{ padding: '2px 8px', background: 'rgba(255,255,255,0.05)', color: 'white', opacity: 0.6, borderRadius: '4px' }}>Staff Continuity</span>
                             </div>
                         </div>
                     </FeatureCard>
-                </div>
+                </div >
 
 
-            </motion.div>
-        </Slide>
+            </motion.div >
+        </Slide >
     );
 }
 
@@ -210,94 +307,7 @@ export function Marketing() {
                     flexDirection: 'column',
                     gap: 'var(--space-xl)'
                 }}>
-                    {/* Center Hero Card - Scope Overview */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.7 }}
-                        className="glass"
-                        style={{
-                            borderRadius: 'var(--radius-3xl)',
-                            padding: 'var(--space-xl)',
-                            border: '1px solid var(--color-border-subtle)',
-                            flex: 1,
-                            display: 'flex',
-                            flexDirection: 'column'
-                        }}
-                    >
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 'var(--space-md)',
-                            marginBottom: 'var(--space-lg)'
-                        }}>
-                            <div style={{
-                                padding: '12px',
-                                background: 'rgba(48, 157, 196, 0.15)',
-                                borderRadius: 'var(--radius-lg)',
-                                color: 'var(--brand-teal)',
-                                display: 'flex'
-                            }}>
-                                <Palette size={24} />
-                            </div>
-                            <div>
-                                <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900 }}>
-                                    Scope of <span className="gradient-text">Work</span>
-                                </h3>
-                                <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--color-text-tertiary)' }}>
-                                    7 strategic intervention areas
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Flowing horizontal scope items */}
-                        <div style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            gap: 'var(--space-md)',
-                            flex: 1,
-                            alignContent: 'center'
-                        }}>
-                            {scope.map((item, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.8 + (idx * 0.08), type: 'spring', stiffness: 150 }}
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: 'var(--space-sm)',
-                                        padding: 'var(--space-md) var(--space-lg)',
-                                        background: 'rgba(48, 157, 196, 0.08)',
-                                        borderRadius: 'var(--radius-full)',
-                                        border: '1px solid rgba(48, 157, 196, 0.2)',
-                                        flex: '0 0 auto'
-                                    }}
-                                >
-                                    <div style={{
-                                        color: 'var(--brand-teal)',
-                                        display: 'flex',
-                                        padding: '6px',
-                                        background: 'rgba(48, 157, 196, 0.12)',
-                                        borderRadius: '8px'
-                                    }}>
-                                        <item.icon size={16} />
-                                    </div>
-                                    <span style={{
-                                        fontSize: '0.9rem',
-                                        fontWeight: 600,
-                                        color: 'var(--color-text-primary)'
-                                    }}>
-                                        {item.text}
-                                    </span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    {/* Bottom Bar - Delivery Models & Regional Split */}
+                    {/* Top Bar - Delivery Models & Regional Split (MOVED TOP) */}
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
@@ -307,7 +317,7 @@ export function Marketing() {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.2, duration: 0.6 }}
+                            transition={{ delay: 0.6, duration: 0.6 }}
                             className="glass"
                             style={{
                                 borderRadius: 'var(--radius-2xl)',
@@ -377,7 +387,7 @@ export function Marketing() {
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.2, duration: 0.6 }}
+                            transition={{ delay: 0.6, duration: 0.6 }}
                             className="glass"
                             style={{
                                 borderRadius: 'var(--radius-2xl)',
@@ -400,7 +410,7 @@ export function Marketing() {
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 1.4 }}
+                                    transition={{ delay: 0.8 }}
                                     style={{
                                         padding: 'var(--space-md)',
                                         background: 'rgba(16, 185, 129, 0.1)',
@@ -416,7 +426,7 @@ export function Marketing() {
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 1.5 }}
+                                    transition={{ delay: 0.9 }}
                                     style={{
                                         padding: 'var(--space-md)',
                                         background: 'rgba(48, 157, 196, 0.1)',
@@ -431,6 +441,93 @@ export function Marketing() {
                             </div>
                         </motion.div>
                     </div>
+
+                    {/* Bottom Hero Card - Scope Overview (MOVED BOTTOM) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.0, duration: 0.7 }}
+                        className="glass"
+                        style={{
+                            borderRadius: 'var(--radius-3xl)',
+                            padding: 'var(--space-xl)',
+                            border: '1px solid var(--color-border-subtle)',
+                            flex: 1,
+                            display: 'flex',
+                            flexDirection: 'column'
+                        }}
+                    >
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 'var(--space-md)',
+                            marginBottom: 'var(--space-lg)'
+                        }}>
+                            <div style={{
+                                padding: '12px',
+                                background: 'rgba(48, 157, 196, 0.15)',
+                                borderRadius: 'var(--radius-lg)',
+                                color: 'var(--brand-teal)',
+                                display: 'flex'
+                            }}>
+                                <Palette size={24} />
+                            </div>
+                            <div>
+                                <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900 }}>
+                                    Scope of <span className="gradient-text">Work</span>
+                                </h3>
+                                <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--color-text-tertiary)' }}>
+                                    7 strategic intervention areas
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Flowing horizontal scope items */}
+                        <div style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            gap: 'var(--space-md)',
+                            flex: 1,
+                            alignContent: 'center'
+                        }}>
+                            {scope.map((item, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: 1.2 + (idx * 0.08), type: 'spring', stiffness: 150 }}
+                                    whileHover={{ scale: 1.05, y: -2 }}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: 'var(--space-sm)',
+                                        padding: 'var(--space-md) var(--space-lg)',
+                                        background: 'rgba(48, 157, 196, 0.08)',
+                                        borderRadius: 'var(--radius-full)',
+                                        border: '1px solid rgba(48, 157, 196, 0.2)',
+                                        flex: '0 0 auto'
+                                    }}
+                                >
+                                    <div style={{
+                                        color: 'var(--brand-teal)',
+                                        display: 'flex',
+                                        padding: '6px',
+                                        background: 'rgba(48, 157, 196, 0.12)',
+                                        borderRadius: '8px'
+                                    }}>
+                                        <item.icon size={16} />
+                                    </div>
+                                    <span style={{
+                                        fontSize: '0.9rem',
+                                        fontWeight: 600,
+                                        color: 'var(--color-text-primary)'
+                                    }}>
+                                        {item.text}
+                                    </span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </Slide>
@@ -439,16 +536,18 @@ export function Marketing() {
 
 export function WorkingSpaces() {
     const metrics = [
+        { label: 'Monthly Membership', v25: 600, v26: 450, unit: 'ILS', color: 'var(--brand-teal)', max: 700 },
+        { label: 'Women-Equipped Spaces', v25: 0, v26: 2, unit: '/5 Facilities', color: 'var(--brand-teal)', max: 5 },
         { label: 'Bandwidth Gain', v25: 125, v26: 162.5, unit: 'Mbps', color: 'var(--brand-teal)', max: 200 },
-        { label: 'Latency / Exp.', v25: 4.5, v26: 7.5, unit: 'Mbps', color: 'var(--brand-teal)', max: 10 },
-        { label: 'Operating Hours', v25: 10, v26: 12.2, unit: 'H/D', color: 'var(--brand-orange)', max: 24 },
-        { label: 'Utilization Rate', v25: 50.4, v26: 61.7, unit: '%', color: 'var(--brand-orange)', max: 100 },
-        { label: 'Daily Active Users', v25: 22, v26: 33, unit: 'Users', color: 'var(--brand-navy)', max: 50 },
-        { label: 'Space Capacity', v25: 45, v26: 54, unit: 'Seats', color: 'var(--brand-navy)', max: 100 },
+        { label: 'Individual User Speed', v25: 4.5, v26: 7.5, unit: 'Mbps', color: 'var(--brand-teal)', max: 10 },
+        { label: 'Operating Hours', v25: 10, v26: 12.2, unit: 'H/D', color: 'var(--brand-teal)', max: 24 },
+        { label: 'Utilization Rate', v25: 50.4, v26: 61.7, unit: '%', color: 'var(--brand-teal)', max: 100 },
+        { label: 'Daily Active Users', v25: 22, v26: 33, unit: 'Users', color: 'var(--brand-teal)', max: 50 },
+        { label: 'Space Capacity', v25: 45, v26: 54, unit: 'Seats', color: 'var(--brand-teal)', max: 100 },
     ];
 
     const roadmap = [
-        { label: 'Target Hubs', value: '7-10', sub: 'New Strategic Locations', icon: Building2, color: 'var(--brand-teal)' },
+        { label: 'Target Spaces', value: '7-10', sub: 'New Strategic Locations', icon: Building2, color: 'var(--brand-teal)' },
         { label: 'Program Price', value: '450 ILS', sub: 'Resilient Rate', icon: Briefcase, color: 'var(--brand-orange)' },
         { label: 'Cohort Support', value: '75%', sub: 'Ops Subsidy Target', icon: TrendingUp, color: 'var(--color-success)' },
         { label: 'Launch Date', value: 'FEB 26', sub: 'Cohort 2 Kickoff', icon: Clock, color: 'var(--brand-red)' },
@@ -511,7 +610,7 @@ export function WorkingSpaces() {
                             margin: 0,
                             lineHeight: 'var(--line-height-tight)'
                         }}>
-                            Phase <span className="gradient-text">Expansion</span> Roadmap
+                            Support impact and <span className="gradient-text">next steps</span>
                         </h2>
                     </div>
 
@@ -550,17 +649,17 @@ export function WorkingSpaces() {
                     >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-lg)' }}>
                             <div>
-                                <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900 }}>Network <span className="gradient-text">Performance</span></h3>
+                                <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900 }}>Impact <span className="gradient-text">insights</span></h3>
                                 <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: 'var(--color-text-tertiary)' }}>2025 Baseline → 2026 Projected Impact</p>
                             </div>
                             <div style={{ display: 'flex', gap: 'var(--space-md)' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                                     <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'rgba(255,255,255,0.25)' }} />
-                                    <span style={{ fontSize: '0.7rem', fontWeight: 700, opacity: 0.6 }}>2025</span>
+                                    <span style={{ fontSize: '0.7rem', fontWeight: 700, opacity: 0.6 }}>Before Support</span>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                                     <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--brand-teal)' }} />
-                                    <span style={{ fontSize: '0.7rem', fontWeight: 700 }}>2026</span>
+                                    <span style={{ fontSize: '0.7rem', fontWeight: 700 }}>After Support</span>
                                 </div>
                             </div>
                         </div>
@@ -571,7 +670,7 @@ export function WorkingSpaces() {
                                     key={m.label}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.8 + (idx * 0.1), duration: 0.5 }}
+                                    transition={{ delay: 0.7 + (idx * 0.1), duration: 0.5 }}
                                     style={{
                                         background: 'rgba(255,255,255,0.02)',
                                         padding: 'var(--space-md)',
@@ -579,50 +678,66 @@ export function WorkingSpaces() {
                                         border: '1px solid var(--color-border-subtle)'
                                     }}
                                 >
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-text-secondary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{m.label}</span>
-                                        <span style={{ fontSize: '1rem', fontWeight: 900, color: 'var(--brand-teal)' }}>{m.v26} <small style={{ opacity: 0.5, fontSize: '0.7rem' }}>{m.unit}</small></span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', alignItems: 'flex-end' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                            <span style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--color-text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '2px' }}>{m.label}</span>
+                                            <span style={{ fontSize: '1.2rem', fontWeight: 900, color: 'white' }}>{m.v26} <small style={{ opacity: 0.6, fontSize: '0.75rem', fontWeight: 600 }}>{m.unit}</small></span>
+                                        </div>
+                                        <div style={{ textAlign: 'right' }}>
+                                            <span style={{
+                                                fontSize: '0.8rem',
+                                                color: m.label === 'Monthly Membership' ? 'var(--color-success)' : 'var(--brand-teal)',
+                                                fontWeight: 900,
+                                                background: m.label === 'Monthly Membership' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(48, 157, 196, 0.1)',
+                                                padding: '2px 8px',
+                                                borderRadius: '6px'
+                                            }}>
+                                                {m.label === 'Monthly Membership' ? '-' : '+'}{Math.abs(Math.round(((m.v26 - m.v25) / (m.v25 || 1)) * 100))}%
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div style={{ height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '6px', overflow: 'hidden', position: 'relative' }}>
-                                        {/* 2025 Base - Now on top (zIndex 2) and animated */}
+                                    <div style={{ height: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', overflow: 'hidden', position: 'relative' }}>
+                                        {/* 2026 Target - The full bar in Branded Teal */}
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${(m.v26 / m.max) * 100}%` }}
+                                            transition={{ duration: 1.5, delay: 0.9 + (idx * 0.1), ease: 'easeOut' }}
+                                            style={{ height: '100%', background: 'var(--brand-teal)', borderRadius: '10px', position: 'relative', zIndex: 1 }}
+                                        />
+                                        {/* 2025 Base - Overlay at the start */}
                                         <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: `${(m.v25 / m.max) * 100}%` }}
-                                            transition={{ duration: 1.2, delay: 1.0 + (idx * 0.1), ease: 'easeOut' }}
+                                            transition={{ duration: 1.2, delay: 0.7 + (idx * 0.1), ease: 'easeOut' }}
                                             style={{
                                                 position: 'absolute',
                                                 left: 0,
                                                 top: 0,
                                                 bottom: 0,
-                                                background: 'rgba(255,255,255,0.3)',
-                                                borderRadius: '6px',
-                                                zIndex: 2
+                                                background: 'rgba(255,255,255,0.4)',
+                                                borderRadius: '10px',
+                                                zIndex: 2,
+                                                borderRight: '1px solid rgba(0,0,0,0.2)'
                                             }}
                                         />
-                                        {/* 2026 Target - Below (zIndex 1) so growth shows as extension */}
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            animate={{ width: `${(m.v26 / m.max) * 100}%` }}
-                                            transition={{ duration: 1.5, delay: 1.2 + (idx * 0.1), ease: 'easeOut' }}
-                                            style={{ height: '100%', background: m.color, borderRadius: '6px', position: 'relative', zIndex: 1 }}
-                                        />
                                     </div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '6px' }}>
-                                        <span style={{ fontSize: '0.65rem', opacity: 0.4 }}>Base: {m.v25}</span>
-                                        <span style={{ fontSize: '0.7rem', color: 'var(--color-success)', fontWeight: 800 }}>+{Math.round(((m.v26 - m.v25) / m.v25) * 100)}%</span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '8px' }}>
+                                        <span style={{ fontSize: '0.65rem', fontWeight: 600, opacity: 0.5 }}>Baseline: {m.v25}</span>
+                                        <span style={{ fontSize: '0.65rem', fontWeight: 600, opacity: 0.5 }}>Target: {m.v26}</span>
                                     </div>
                                 </motion.div>
                             ))}
                         </div>
                     </motion.div>
 
-                    {/* Right: Roadmap & Capacity */}
+                    {/* Right: Cohort Cards */}
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: 'var(--space-xl)'
+                        gap: 'var(--space-lg)',
+                        height: '100%'
                     }}>
-                        {/* Cohort 2 Roadmap */}
+                        {/* Cohort 1 Card */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -634,171 +749,117 @@ export function WorkingSpaces() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 border: '1px solid var(--color-border-subtle)',
-                                flex: 1
+                                flex: 1,
+                                background: 'linear-gradient(135deg, rgba(48, 157, 196, 0.05) 0%, transparent 100%)',
+                                justifyContent: 'space-between'
                             }}
                         >
-                            <div style={{ marginBottom: 'var(--space-lg)' }}>
-                                <div className="badge" style={{ background: 'var(--brand-orange)', color: 'white', marginBottom: 'var(--space-sm)' }}>NEXT CYCLE</div>
-                                <h3 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 900 }}>Cohort 2 <span style={{ color: 'var(--brand-orange)' }}>Scale-Up</span></h3>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                <div>
+                                    <div className="badge" style={{ background: 'var(--brand-teal)', color: 'white', marginBottom: 'var(--space-sm)' }}>CYCLE 1</div>
+                                    <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900, color: 'var(--brand-orange)' }}>Cohort 1</h3>
+                                </div>
+                                <div style={{ background: 'rgba(48, 157, 196, 0.1)', padding: '12px', borderRadius: '16px' }}>
+                                    <Building2 size={24} color="var(--brand-teal)" />
+                                </div>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)', flex: 1 }}>
-                                {roadmap.map((item, idx) => (
-                                    <motion.div
-                                        key={item.label}
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: 1 + (idx * 0.1), type: 'spring', stiffness: 150 }}
-                                        whileHover={{ scale: 1.05, y: -3 }}
-                                        style={{
-                                            padding: 'var(--space-md)',
-                                            background: 'rgba(255,255,255,0.03)',
-                                            borderRadius: 'var(--radius-xl)',
-                                            border: '1px solid var(--color-border-subtle)',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            alignItems: 'center',
-                                            textAlign: 'center',
-                                            gap: 'var(--space-sm)',
-                                            position: 'relative',
-                                            overflow: 'hidden'
-                                        }}
-                                    >
-                                        <div style={{
-                                            width: '40px',
-                                            height: '40px',
-                                            borderRadius: '12px',
-                                            background: `${item.color}20`,
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            color: item.color
-                                        }}>
-                                            <item.icon size={20} />
-                                        </div>
-                                        <div>
-                                            <div style={{ fontSize: '1.3rem', fontWeight: 900, lineHeight: 1, marginBottom: '4px' }}>{item.value}</div>
-                                            <div style={{ fontSize: '0.7rem', fontWeight: 700, opacity: 0.7 }}>{item.label}</div>
-                                            <div style={{ fontSize: '0.65rem', opacity: 0.5, marginTop: '2px' }}>{item.sub}</div>
-                                        </div>
-                                    </motion.div>
-                                ))}
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)', marginTop: 'var(--space-lg)' }}>
+                                <div style={{
+                                    padding: 'var(--space-md)',
+                                    background: 'rgba(255,255,255,0.03)',
+                                    borderRadius: 'var(--radius-2xl)',
+                                    border: '1px solid var(--color-border-subtle)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    textAlign: 'center'
+                                }}>
+                                    <div style={{ fontSize: '2.2rem', fontWeight: 900, color: 'var(--brand-teal)', lineHeight: 1 }}>5</div>
+                                    <div style={{ fontSize: '0.7rem', fontWeight: 800, marginTop: '6px', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Spaces Supported</div>
+                                </div>
+                                <div style={{
+                                    padding: 'var(--space-md)',
+                                    background: 'rgba(255,255,255,0.03)',
+                                    borderRadius: 'var(--radius-2xl)',
+                                    border: '1px solid var(--color-border-subtle)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    textAlign: 'center'
+                                }}>
+                                    <div style={{ fontSize: '1.1rem', fontWeight: 950, color: 'var(--color-success)', letterSpacing: '1px' }}>ACTIVE</div>
+                                    <div style={{ fontSize: '0.7rem', fontWeight: 800, marginTop: '4px', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Support Status</div>
+                                    <div style={{ fontSize: '0.6rem', fontWeight: 800, marginTop: '8px', color: 'var(--color-success)', opacity: 0.9, background: 'rgba(16, 185, 129, 0.1)', padding: '2px 8px', borderRadius: '4px' }}>Aug 25 — Jan 26</div>
+                                </div>
                             </div>
                         </motion.div>
 
-                        {/* Capacity Target Gauge */}
+                        {/* Cohort 2 Card */}
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.8, duration: 0.7 }}
                             className="glass-strong"
                             style={{
                                 borderRadius: 'var(--radius-3xl)',
-                                padding: 'var(--space-lg)',
-                                background: 'linear-gradient(135deg, rgba(48, 157, 196, 0.1) 0%, rgba(0, 210, 170, 0.15) 100%)',
-                                border: '2px solid rgba(48, 157, 196, 0.3)',
-                                textAlign: 'center',
-                                position: 'relative',
-                                overflow: 'hidden'
+                                padding: 'var(--space-xl)',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                border: '2px solid rgba(222, 99, 54, 0.3)',
+                                flex: 1,
+                                background: 'linear-gradient(135deg, rgba(222, 99, 54, 0.1) 0%, transparent 100%)',
+                                justifyContent: 'space-between'
                             }}
                         >
-                            <motion.div
-                                animate={{
-                                    scale: [1, 1.2, 1],
-                                    opacity: [0.3, 0.5, 0.3]
-                                }}
-                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                                style={{
-                                    position: 'absolute',
-                                    inset: 0,
-                                    background: 'radial-gradient(circle at center, rgba(48, 157, 196, 0.2) 0%, transparent 70%)',
-                                    pointerEvents: 'none'
-                                }}
-                            />
-
-                            <div style={{ position: 'relative', zIndex: 1 }}>
-                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-xs)', marginBottom: 'var(--space-sm)' }}>
-                                    <div style={{
-                                        width: 10,
-                                        height: 10,
-                                        borderRadius: '50%',
-                                        background: 'var(--brand-teal)',
-                                        boxShadow: '0 0 15px var(--brand-teal)'
-                                    }} />
-                                    <span style={{ fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>TARGET CAPACITY</span>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                <div>
+                                    <div className="badge" style={{ background: 'var(--brand-orange)', color: 'white', marginBottom: 'var(--space-sm)' }}>NEXT CYCLE</div>
+                                    <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900 }}>Cohort 2</h3>
                                 </div>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 900, lineHeight: 1, color: 'var(--brand-teal)' }}>10+</div>
-                                <div style={{ fontSize: '0.85rem', fontWeight: 600, marginTop: 'var(--space-xs)', opacity: 0.8 }}>Integrated Hubs by 2026</div>
+                                <div style={{ background: 'rgba(222, 99, 54, 0.1)', padding: '12px', borderRadius: '16px' }}>
+                                    <Zap size={24} color="var(--brand-orange)" />
+                                </div>
+                            </div>
+
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)', marginTop: 'var(--space-lg)' }}>
+                                <div style={{
+                                    padding: 'var(--space-md)',
+                                    background: 'rgba(255,255,255,0.03)',
+                                    borderRadius: 'var(--radius-2xl)',
+                                    border: '1px solid var(--color-border-subtle)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    textAlign: 'center'
+                                }}>
+                                    <div style={{ fontSize: '2.2rem', fontWeight: 900, color: 'var(--brand-orange)', lineHeight: 1 }}>10</div>
+                                    <div style={{ fontSize: '0.7rem', fontWeight: 800, marginTop: '6px', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Targeted Spaces</div>
+                                </div>
+                                <div style={{
+                                    padding: 'var(--space-md)',
+                                    background: 'rgba(255,255,255,0.03)',
+                                    borderRadius: 'var(--radius-2xl)',
+                                    border: '1px solid var(--color-border-subtle)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    textAlign: 'center'
+                                }}>
+                                    <div style={{ fontSize: '1.8rem', fontWeight: 900, color: 'white', lineHeight: 1 }}>FEB 26</div>
+                                    <div style={{ fontSize: '0.7rem', fontWeight: 800, marginTop: '6px', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '0.5px' }}>New Cohort Application</div>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </div>
-        </Slide>
+        </Slide >
     );
 }
 
 
-export function SuccessStories() {
-    return (
-        <Slide>
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                style={{ width: '100%', height: '100%' }}
-            >
-                <motion.h2 variants={fadeInUp} style={{ marginBottom: 'var(--space-xl)' }}>
-                    Impact Stories
-                </motion.h2>
-
-                <div className="grid-2" style={{ gap: 'var(--space-xl)' }}>
-                    {/* Accessline Story */}
-                    <FeatureCard
-                        title="Accessline"
-                        description="From Interns to Major Contracts"
-                        delay={0.1}
-                    >
-                        <div style={{ fontSize: 'var(--font-size-sm)', lineHeight: '1.6' }}>
-                            <p style={{ marginBottom: 'var(--space-md)' }}>
-                                Strengthened by hiring <strong style={{ color: 'var(--color-accent-secondary)' }}>Train-to-Hire interns</strong>, Accessline secured a <strong style={{ color: 'var(--color-accent-primary)' }}>major international project</strong> focused on data estimation in Gaza.
-                            </p>
-                            <p>
-                                This capacity enabled them to:
-                            </p>
-                            <ul style={{ marginTop: 'var(--space-sm)', marginBottom: 'var(--space-md)' }}>
-                                <li>Deliver critical work in a challenging environment</li>
-                                <li>Offer full-time jobs to <strong>3 Elevate interns</strong></li>
-                                <li>Secure <strong>multiple new projects</strong></li>
-                            </ul>
-                        </div>
-                    </FeatureCard>
-
-                    {/* Hexa Story */}
-                    <FeatureCard
-                        title="Hexa & MIRA"
-                        description="AI Innovation Recognized Globally"
-                        delay={0.2}
-                    >
-                        <div style={{ fontSize: 'var(--font-size-sm)', lineHeight: '1.6' }}>
-                            <p style={{ marginBottom: 'var(--space-md)' }}>
-                                Achieved a major milestone with <strong style={{ color: 'var(--color-accent-secondary)' }}>MIRA</strong>, an AI-powered smart health app for women using voice & camera analysis.
-                            </p>
-                            <div style={{
-                                padding: 'var(--space-md)',
-                                background: 'rgba(255, 255, 255, 0.05)',
-                                borderRadius: 'var(--radius-md)',
-                                borderLeft: '3px solid var(--color-accent-primary)'
-                            }}>
-                                <strong style={{ display: 'block', marginBottom: 'var(--space-xs)', color: 'var(--color-text-primary)' }}>
-                                    Global Competition Selection
-                                </strong>
-                                Accepted in the first stage with <strong className="gradient-text">significant funding secured</strong>.
-                            </div>
-                        </div>
-                    </FeatureCard>
-                </div>
-            </motion.div>
-        </Slide>
-    );
-}

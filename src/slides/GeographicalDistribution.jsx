@@ -25,7 +25,6 @@ const GeographicalDistribution = () => {
 
     const total2024 = 94;
     const total2025 = 98;
-    const growth = total2025 - total2024;
 
     const maxCount = Math.max(...data2024.map(d => d.count), ...data2025.map(d => d.count));
 
@@ -89,49 +88,6 @@ const GeographicalDistribution = () => {
                         </h2>
                     </div>
 
-                    {/* Growth Badge */}
-                    <motion.div
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.4, type: 'spring', stiffness: 200 }}
-                        style={{
-                            background: 'var(--color-surface)',
-                            backdropFilter: 'blur(var(--glass-blur))',
-                            WebkitBackdropFilter: 'blur(var(--glass-blur))',
-                            padding: 'var(--space-lg) var(--space-xl)',
-                            borderRadius: 'var(--radius-xl)',
-                            border: '1px solid var(--color-border-subtle)',
-                            boxShadow: 'var(--shadow-lg)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            gap: 'var(--space-xs)'
-                        }}
-                    >
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 'var(--space-xs)',
-                            color: 'var(--color-success)'
-                        }}>
-                            <TrendingUp size={20} />
-                            <span style={{
-                                fontSize: 'var(--font-size-2xl)',
-                                fontWeight: 'var(--font-weight-extrabold)'
-                            }}>
-                                +{growth}
-                            </span>
-                        </div>
-                        <span style={{
-                            fontSize: 'var(--font-size-xs)',
-                            color: 'var(--color-text-tertiary)',
-                            textTransform: 'uppercase',
-                            letterSpacing: '1px',
-                            fontWeight: 'var(--font-weight-semibold)'
-                        }}>
-                            Companies Growth
-                        </span>
-                    </motion.div>
                 </motion.div>
 
                 {/* Split Comparison View */}
@@ -207,7 +163,7 @@ const GeographicalDistribution = () => {
                                 </div>
                                 <div style={{ width: '1px', background: 'var(--color-border-subtle)' }} />
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-accent-primary)', lineHeight: 1 }}>27</span>
+                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-accent-primary)', lineHeight: 1 }}>25</span>
                                     <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Supported</span>
                                 </div>
                             </div>
@@ -360,7 +316,7 @@ const GeographicalDistribution = () => {
                                 </div>
                                 <div style={{ width: '1px', background: 'var(--color-border-subtle)' }} />
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-success)', lineHeight: 1 }}>36</span>
+                                    <span style={{ fontSize: 'var(--font-size-lg)', fontWeight: '800', color: 'var(--color-success)', lineHeight: 1 }}>35</span>
                                     <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--color-text-tertiary)' }}>Supported</span>
                                 </div>
                             </div>
@@ -493,7 +449,7 @@ const GeographicalDistribution = () => {
                             borderRadius: '50%',
                             background: 'var(--color-success)'
                         }} />
-                        Gaza enters with 17 companies
+                        Program expanded to Gaza
                     </div>
                     <div style={{
                         display: 'inline-flex',

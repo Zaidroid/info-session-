@@ -26,13 +26,13 @@ import GeographicalDistribution from './slides/GeographicalDistribution'; // New
 import IntroTestimonials from './slides/IntroTestimonials'; // New Intro Slide
 
 import { Individuals1, Individuals2, Individuals3, Individuals4, Individuals5 } from './slides/Hazem/Content';
-import { CapacityBuilding, Marketing, WorkingSpaces, SuccessStories } from './slides/Raouf/Content';
+import { CapacityBuilding, Marketing, WorkingSpaces } from './slides/Raouf/Content';
 import { MarketAccessProgressive } from './slides/Zaid/MarketAccessProgressive';
 import { ElevateBridge } from './slides/Zaid/ElevateBridge';
 import { MarketAccessImpact } from './slides/Zaid/Content';
 import { GazaResilience, Post2023Impact } from './slides/Alan/Content';
 
-import alanPhoto from './assets/speakers/Alan2.JPG';
+import alanPhoto from './assets/speakers/alan-new.jpg';
 import randPhoto from './assets/speakers/Rand.JPG';
 import hazemPhoto from './assets/speakers/Hazem.JPG';
 import raoufPhoto from './assets/speakers/Raouf.JPG';
@@ -165,8 +165,6 @@ function App() {
     },
     { component: <Marketing />, speaker: SPEAKERS.RAOUF },
 
-    // Success Stories
-    { component: <SuccessStories />, speaker: SPEAKERS.RAOUF },
 
     // NEW: Working Spaces Brief
     {

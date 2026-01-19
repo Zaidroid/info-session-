@@ -60,7 +60,7 @@ export function MarketAccessProgressive({ step = 0 }) {
                             transition={{ duration: 0.4 }}
                         >
                             <motion.h2 variants={fadeInUp} style={{ marginBottom: 'var(--space-xs)', textAlign: 'center' }}>
-                                Market Access Program
+                                Market Access Intervention
                             </motion.h2>
                             <motion.p variants={fadeInUp} style={{
                                 marginBottom: 'var(--space-2xl)',
@@ -154,7 +154,7 @@ export function MarketAccessProgressive({ step = 0 }) {
                                         </ul>
                                         <div style={{ marginTop: 'auto', paddingTop: 'var(--space-sm)', borderTop: '1px solid var(--color-border-subtle)' }}>
                                             <strong className="gradient-text" style={{ fontSize: 'var(--font-size-lg)' }}>
-                                                6 Companies
+                                                8 Companies
                                             </strong>
                                             <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)' }}>
                                                 Supported for international events
@@ -249,7 +249,7 @@ export function MarketAccessProgressive({ step = 0 }) {
                             >
                                 <FeatureCard
                                     title="ElevateBridge"
-                                    description="Specialized network of Market Access Hunters."
+                                    description="Bridging Palestinian tech companies with skilled freelancers to boost revenue."
                                     highlighted={true}
                                     highlightLabel={null}
                                     style={{
@@ -259,15 +259,15 @@ export function MarketAccessProgressive({ step = 0 }) {
                                     }}
                                     delay={0}
                                 >
-                                    <p style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-sm)', lineHeight: 'var(--line-height-relaxed)' }}>
-                                        Connecting agencies with global opportunities.
+                                    <p style={{ marginTop: 'var(--space-md)', fontSize: 'var(--font-size-xs)', lineHeight: 'var(--line-height-relaxed)', opacity: 1 }}>
+                                        Skilled "Hunters" acquire new clients on platforms like <strong style={{ color: 'var(--brand-teal)' }}>Upwork</strong> & <strong style={{ color: 'var(--brand-teal)' }}>LinkedIn</strong>.
                                     </p>
                                     <div style={{ marginTop: 'auto', paddingTop: 'var(--space-sm)', borderTop: '1px solid var(--color-border-subtle)' }}>
                                         <strong className="gradient-text" style={{ fontSize: 'var(--font-size-lg)' }}>
-                                            Lead Generation
+                                            Market Reach
                                         </strong>
                                         <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)' }}>
-                                            Partner Matching • Deal Closing
+                                            Client Acquisition • Revenue Growth
                                         </div>
                                     </div>
                                 </FeatureCard>
