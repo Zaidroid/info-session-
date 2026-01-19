@@ -28,8 +28,8 @@ export function CapacityBuilding() {
                 <motion.div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 'var(--space-lg)', flexDirection: 'column' }}>
                     {/* Elevate Logo Concept */}
                     <motion.h2 variants={fadeInUp} style={{ fontSize: '3rem', fontWeight: '900', letterSpacing: '-2px', lineHeight: 1, textAlign: 'center' }}>
-                        Elevate <span className="gradient-text">2.0</span>
-                        <div style={{ fontSize: '1.8rem', marginTop: 'var(--space-xs)', color: 'var(--color-text-secondary)' }}>2025</div>
+                        Capacity <span className="gradient-text">Building</span>
+                        <div style={{ fontSize: '1.8rem', marginTop: 'var(--space-xs)', color: 'var(--color-text-secondary)' }}>Elevate 2.0 | 2025</div>
                     </motion.h2>
                 </motion.div>
 
