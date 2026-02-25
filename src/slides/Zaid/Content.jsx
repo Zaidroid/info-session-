@@ -11,6 +11,7 @@ import zaidBg2 from '../../assets/images/backgrounds/zaid/zaid-2.jpg';
 import zaidBg3 from '../../assets/images/backgrounds/zaid/zaid-3.jpg';
 import zaidBg4 from '../../assets/images/backgrounds/zaid/zaid-4.jpg';
 import zaidBg5 from '../../assets/images/backgrounds/zaid/zaid-5.jpg';
+import { Globe, TrendingUp, Compass, ShieldCheck, DollarSign, Building2 } from 'lucide-react';
 
 const zaidImages = [zaidBg1, zaidBg2, zaidBg3, zaidBg4, zaidBg5];
 
@@ -20,141 +21,273 @@ const containerVariants = staggerContainer(0.15);
 export function MarketAccessGrid() {
     return (
         <Slide>
-            {/* Background Effect */}
+            <FloatingBackground images={zaidImages} />
+            
+            {/* Background overlay - lighter to match presentation */}
             <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'radial-gradient(circle at 70% 30%, rgba(48, 157, 196, 0.08) 0%, transparent 50%)',
-                pointerEvents: 'none',
+                background: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%)',
                 zIndex: 0
             }} />
-            <FloatingBackground images={zaidImages} />
 
-            <div style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                padding: 'var(--space-2xl) var(--space-3xl) var(--space-lg)',
-                position: 'relative',
-                zIndex: 1
-            }}>
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '3rem 4rem',
+                    position: 'relative',
+                    zIndex: 1
+                }}
+            >
                 {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.6 }}
-                    style={{
-                        marginBottom: 'var(--space-xl)'
-                    }}
-                >
-                    <div>
-                        <div style={{
+                <motion.div variants={fadeInUp} style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <h2 style={{
+                        fontSize: 'clamp(2.5rem, 5vmin, 4rem)',
+                        fontWeight: 900,
+                        marginBottom: '0.5rem',
+                        color: 'white'
+                    }}>
+                        Market Access Intervention
+                    </h2>
+                    <p style={{
+                        fontSize: '1.3rem',
+                        color: 'var(--color-accent-secondary)',
+                        fontStyle: 'italic',
+                        marginBottom: '0.25rem'
+                    }}>
+                        "Collaboration over Competition"
+                    </p>
+                    <p style={{
+                        fontSize: '0.9rem',
+                        color: 'rgba(255,255,255,0.6)',
+                        fontStyle: 'italic',
+                        maxWidth: '600px',
+                        margin: '0 auto'
+                    }}>
+                        "Contribution to power and electricity provision support was crucial."
+                    </p>
+                </motion.div>
+
+                {/* 4 Cards Grid */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(4, 1fr)',
+                    gap: '1.5rem',
+                    width: '100%',
+                    maxWidth: '1400px'
+                }}>
+                    {/* C-Suite Coaching */}
+                    <motion.div
+                        variants={fadeInUp}
+                        style={{
+                            background: 'rgba(30, 50, 60, 0.8)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            border: '1px solid rgba(100, 200, 255, 0.2)',
+                            padding: '1.5rem',
                             display: 'flex',
-                            alignItems: 'center',
-                            gap: 'var(--space-sm)',
-                            marginBottom: 'var(--space-sm)',
-                            color: 'var(--brand-teal)'
+                            flexDirection: 'column'
+                        }}
+                    >
+                        <h3 style={{
+                            fontSize: '1.3rem',
+                            fontWeight: 700,
+                            color: 'var(--color-accent-primary)',
+                            marginBottom: '0.75rem'
                         }}>
-                            <Globe size={20} />
-                            <span style={{
-                                fontSize: 'var(--font-size-sm)',
-                                fontWeight: 'var(--font-weight-bold)',
-                                textTransform: 'uppercase',
-                                letterSpacing: '2px'
-                            }}>
-                                Global Expansion
-                            </span>
-                        </div>
-                        <h2 style={{
-                            fontSize: 'clamp(2.5rem, 5vmin, 4rem)',
-                            fontWeight: 'var(--font-weight-extrabold)',
-                            margin: 0,
-                            lineHeight: 'var(--line-height-tight)'
+                            C-Suite Coaching
+                        </h3>
+                        <p style={{
+                            fontSize: '0.85rem',
+                            color: 'rgba(255,255,255,0.8)',
+                            marginBottom: '1rem',
+                            lineHeight: 1.5
                         }}>
-                            Market <span className="gradient-text">Access</span>
-                        </h2>
-                    </div>
+                            Targeted mentoring to strengthen go-to-market & investor readiness.
+                        </p>
+                        <ul style={{
+                            fontSize: '0.8rem',
+                            color: 'rgba(255,255,255,0.7)',
+                            marginBottom: '1rem',
+                            paddingLeft: '1.2rem'
+                        }}>
+                            <li>Pricing Models & GTM Strategy</li>
+                            <li>International Advisors</li>
+                        </ul>
+                        <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#FF6B35' }}>11 Companies</div>
+                            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic' }}>
+                                Strategic consultations delivered
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Legal Support */}
+                    <motion.div
+                        variants={fadeInUp}
+                        style={{
+                            background: 'rgba(30, 50, 60, 0.8)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            border: '1px solid rgba(100, 200, 255, 0.2)',
+                            padding: '1.5rem',
+                            display: 'flex',
+                            flexDirection: 'column'
+                        }}
+                    >
+                        <h3 style={{
+                            fontSize: '1.3rem',
+                            fontWeight: 700,
+                            color: 'var(--color-accent-primary)',
+                            marginBottom: '0.75rem'
+                        }}>
+                            Legal Support
+                        </h3>
+                        <p style={{
+                            fontSize: '0.85rem',
+                            color: 'rgba(255,255,255,0.8)',
+                            marginBottom: '1rem',
+                            lineHeight: 1.5
+                        }}>
+                            Navigating international legal, tax, and contracting requirements.
+                        </p>
+                        <ul style={{
+                            fontSize: '0.8rem',
+                            color: 'rgba(255,255,255,0.7)',
+                            marginBottom: '1rem',
+                            paddingLeft: '1.2rem'
+                        }}>
+                            <li>Partner: International Legal Firm</li>
+                            <li>3 Companies registering globally</li>
+                        </ul>
+                        <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#FF6B35' }}>7 Companies</div>
+                            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic' }}>
+                                Supported with contracts & taxes
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Conferences */}
+                    <motion.div
+                        variants={fadeInUp}
+                        style={{
+                            background: 'rgba(30, 50, 60, 0.8)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            border: '1px solid rgba(100, 200, 255, 0.2)',
+                            padding: '1.5rem',
+                            display: 'flex',
+                            flexDirection: 'column'
+                        }}
+                    >
+                        <h3 style={{
+                            fontSize: '1.3rem',
+                            fontWeight: 700,
+                            color: 'var(--color-accent-primary)',
+                            marginBottom: '0.75rem'
+                        }}>
+                            Conferences
+                        </h3>
+                        <p style={{
+                            fontSize: '0.85rem',
+                            color: 'rgba(255,255,255,0.8)',
+                            marginBottom: '1rem',
+                            lineHeight: 1.5
+                        }}>
+                            Direct exposure to global markets and potential partners.
+                        </p>
+                        <ul style={{
+                            fontSize: '0.8rem',
+                            color: 'rgba(255,255,255,0.7)',
+                            marginBottom: '1rem',
+                            paddingLeft: '1.2rem'
+                        }}>
+                            <li>Gitex (Dubai) Participation</li>
+                            <li>Signed MOUs & Networking</li>
+                        </ul>
+                        <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#FF6B35' }}>8 Companies</div>
+                            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic' }}>
+                                Supported for international events
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* ElevateBridge */}
+                    <motion.div
+                        variants={fadeInUp}
+                        style={{
+                            background: 'rgba(50, 40, 30, 0.8)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            border: '2px solid rgba(255, 140, 60, 0.4)',
+                            padding: '1.5rem',
+                            display: 'flex',
+                            flexDirection: 'column'
+                        }}
+                    >
+                        <h3 style={{
+                            fontSize: '1.3rem',
+                            fontWeight: 700,
+                            color: '#FF8C42',
+                            marginBottom: '0.75rem'
+                        }}>
+                            ElevateBridge
+                        </h3>
+                        <p style={{
+                            fontSize: '0.85rem',
+                            color: 'rgba(255,255,255,0.8)',
+                            marginBottom: '1rem',
+                            lineHeight: 1.5
+                        }}>
+                            Bridging Palestinian tech companies with skilled freelancers to boost revenue.
+                        </p>
+                        <ul style={{
+                            fontSize: '0.8rem',
+                            color: 'rgba(255,255,255,0.7)',
+                            marginBottom: '1rem',
+                            paddingLeft: '1.2rem'
+                        }}>
+                            <li style={{ fontStyle: 'italic' }}>Skilled "Hunters" acquire new clients on platforms like Upwork & LinkedIn</li>
+                        </ul>
+                        <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                            <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#FF8C42' }}>Market Reach</div>
+                            <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic' }}>
+                                Client Acquisition + Revenue Growth
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Footer Notes */}
+                <motion.div variants={fadeInUp} style={{
+                    marginTop: '1.5rem',
+                    fontSize: '0.75rem',
+                    color: 'rgba(255,255,255,0.4)',
+                    fontStyle: 'italic',
+                    textAlign: 'center',
+                    maxWidth: '900px'
+                }}>
+                    <p style={{ margin: '0.25rem 0' }}>
+                        "GITEX participation opened incredible doors for international exposure."
+                    </p>
+                    <p style={{ margin: '0.25rem 0' }}>
+                        "Upwork was great, providing high-quality support to upskill the team."
+                    </p>
+                    <p style={{ margin: '0.25rem 0' }}>
+                        "Legal guidance & dedicated tax documents."
+                    </p>
                 </motion.div>
-
-                {/* 4 Components Grid */}
-                <motion.div
-                    initial="hidden"
-                    animate="visible"
-                    variants={containerVariants}
-                    style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(2, 1fr)',
-                        gap: 'var(--space-lg)',
-                        flex: 1
-                    }}
-                >
-                    <FeatureCard
-                        title="C-Suite Coaching"
-                        description="Upskilling leadership for global strategy."
-                        delay={0.1}
-                    >
-                        <ul style={{ marginTop: 'var(--space-md)', marginBottom: 'var(--space-lg)' }}>
-                            <li>Pitching & Data Strategy</li>
-                            <li>Business Development</li>
-                        </ul>
-                        <div style={{ marginTop: 'auto', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-border-subtle)' }}>
-                            <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>
-                                11 Companies
-                            </strong>
-                        </div>
-                    </FeatureCard>
-
-                    <FeatureCard
-                        title="Legal Support"
-                        description="Infrastructure for international expansion."
-                        delay={0.2}
-                    >
-                        <ul style={{ marginTop: 'var(--space-md)', marginBottom: 'var(--space-lg)' }}>
-                            <li>Contracts & NDA Review</li>
-                            <li>Registration (UAE, KSA, US)</li>
-                        </ul>
-                        <div style={{ marginTop: 'auto', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-border-subtle)' }}>
-                            <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>
-                                7 Companies
-                            </strong>
-                        </div>
-                    </FeatureCard>
-
-                    <FeatureCard
-                        title="Conferences"
-                        description="Direct exposure to global markets."
-                        delay={0.3}
-                    >
-                        <ul style={{ marginTop: 'var(--space-md)', marginBottom: 'var(--space-lg)' }}>
-                            <li>GITEX (Dubai)</li>
-                            <li>Future Blockchain Summit</li>
-                            <li>Biban (KSA)</li>
-                        </ul>
-                        <div style={{ marginTop: 'auto', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-border-subtle)' }}>
-                            <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>
-                                8 Companies
-                            </strong>
-                        </div>
-                    </FeatureCard>
-
-                    <FeatureCard
-                        title="ElevateBridge"
-                        description="Collaboration over competition."
-                        delay={0.4}
-                    >
-                        <ul style={{ marginTop: 'var(--space-md)', marginBottom: 'var(--space-lg)' }}>
-                            <li>Network of Professional Hunters</li>
-                            <li>Global Opportunity Connections</li>
-                        </ul>
-                        <div style={{ marginTop: 'auto', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-border-subtle)' }}>
-                            <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>
-                                New Initiative
-                            </strong>
-                        </div>
-                    </FeatureCard>
-                </motion.div>
-            </div>
+            </motion.div>
         </Slide>
     );
 }
@@ -257,8 +390,6 @@ export function ElevateBridgeModule() {
         </Slide>
     );
 }
-
-import { Globe, TrendingUp, Compass, ShieldCheck, DollarSign, Building2 } from 'lucide-react';
 
 export function MarketAccessImpact() {
     const impactMetrics = [
@@ -428,5 +559,3 @@ export function MarketAccessImpact() {
         </Slide>
     );
 }
-
-
