@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Slide from '../components/Slide';
-import { Play, Heart } from 'lucide-react';
+import { Play, Users } from 'lucide-react';
 
-export default function GazaVideoPlaceholder() {
-    const videoUrl = "https://www.youtube.com/embed/bexzLFrpWb8?si=30Ljy2drVgDxgIo1&rel=0&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3";
+export default function CompanyTestimonialVideo() {
+    const videoUrl = "https://www.youtube.com/embed/BzcTzrnLVGQ";
 
     return (
         <Slide>
@@ -34,7 +34,7 @@ export default function GazaVideoPlaceholder() {
                         border: '1px solid rgba(255,255,255,0.1)',
                         marginBottom: '1rem'
                     }}>
-                        <Heart size={18} color="var(--color-accent-secondary)" />
+                        <Users size={18} color="var(--color-accent-secondary)" />
                         <span style={{
                             fontSize: '0.8rem',
                             fontWeight: 700,
@@ -42,7 +42,7 @@ export default function GazaVideoPlaceholder() {
                             letterSpacing: '2px',
                             color: 'var(--color-accent-secondary)'
                         }}>
-                            Resilience & Hope
+                            Success Stories
                         </span>
                     </div>
                     <h2 style={{
@@ -51,14 +51,14 @@ export default function GazaVideoPlaceholder() {
                         lineHeight: 1.1,
                         margin: '0 0 0.5rem 0'
                     }}>
-                        Gaza <span className="gradient-text">Resilience</span>
+                        Company <span className="gradient-text">Testimonials</span>
                     </h2>
                     <p style={{
                         fontSize: '1.1rem',
                         color: 'var(--color-text-secondary)',
                         margin: 0
                     }}>
-                        Stories of strength and determination from Gaza
+                        Hear from companies transformed by Elevate
                     </p>
                 </motion.div>
 
@@ -81,7 +81,7 @@ export default function GazaVideoPlaceholder() {
                 >
                     <iframe
                         src={videoUrl}
-                        title="Gaza Resilience"
+                        title="Company Testimonials"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -109,7 +109,7 @@ export default function GazaVideoPlaceholder() {
                     }}
                 >
                     <Play size={16} />
-                    <span>Witnessing the unbreakable spirit of Gaza's tech community</span>
+                    <span>Real stories from Palestinian tech companies in the Elevate Program</span>
                 </motion.div>
             </div>
         </Slide>

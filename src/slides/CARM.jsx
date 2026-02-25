@@ -8,7 +8,7 @@ const CARM = () => {
         {
             icon: Mail,
             label: 'Email Support',
-            value: 'ps-carm@mercycorps.org',
+            value: 'Ps-carm@mercycorps.org',
             subValue: 'Primary Channel',
             color: 'var(--color-accent-primary)',
             gradient: 'linear-gradient(135deg, rgba(222, 99, 54, 0.1), rgba(222, 99, 54, 0.05))'
@@ -16,7 +16,7 @@ const CARM = () => {
         {
             icon: Mail,
             label: 'Feedback Email',
-            value: 'ps-fcarm@mercycorps.org',
+            value: 'Ps-fcarm@mercycorps.org',
             subValue: 'Feedback & Suggestions',
             color: 'var(--color-accent-secondary)',
             gradient: 'linear-gradient(135deg, rgba(48, 157, 196, 0.1), rgba(48, 157, 196, 0.05))'
@@ -24,7 +24,7 @@ const CARM = () => {
         {
             icon: Phone,
             label: 'Hotline',
-            value: '1800 130 131',
+            value: '1800130131',
             subValue: 'Toll-free Support',
             color: '#3b82f6',
             gradient: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05))'

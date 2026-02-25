@@ -8,45 +8,47 @@ const TimelineItem = ({ time, title, subtitle, isLast }) => (
         variants={fadeInUp}
         style={{
             display: 'flex',
-            gap: 'var(--space-lg)', // Reduced gap
+            gap: time ? 'var(--space-lg)' : '0.5rem',
             position: 'relative',
-            paddingBottom: isLast ? 0 : '1.5rem', // Reduced padding
-            alignItems: 'baseline' // Align by text baseline
+            paddingBottom: isLast ? 0 : '1.5rem',
+            alignItems: 'baseline'
         }}
     >
         {/* Timeline Line */}
         {!isLast && (
             <div style={{
                 position: 'absolute',
-                left: '95px', // Adjusted for new gap/width
+                left: time ? '95px' : '15px',
                 top: '20px',
                 bottom: 0,
-                width: '1px', // Thinner line
+                width: '1px',
                 background: 'linear-gradient(to bottom, var(--color-accent-primary), var(--color-border-subtle))',
                 opacity: 0.3
             }} />
         )}
 
-        {/* Time */}
-        <div style={{
-            width: '80px', // More compact width
-            textAlign: 'right',
-            flexShrink: 0,
-        }}>
-            <span style={{
-                fontSize: '0.95rem', // Smaller font
-                fontWeight: '700',
-                color: 'var(--color-accent-secondary)',
-                fontVariantNumeric: 'tabular-nums',
-                letterSpacing: '0.5px'
+        {/* Time - Only show if time exists */}
+        {time && (
+            <div style={{
+                width: '80px',
+                textAlign: 'right',
+                flexShrink: 0,
             }}>
-                {time}
-            </span>
-        </div>
+                <span style={{
+                    fontSize: '0.95rem',
+                    fontWeight: '700',
+                    color: 'var(--color-accent-secondary)',
+                    fontVariantNumeric: 'tabular-nums',
+                    letterSpacing: '0.5px'
+                }}>
+                    {time}
+                </span>
+            </div>
+        )}
 
         {/* Dot */}
         <div style={{
-            width: '10px', // Smaller dot
+            width: '10px',
             height: '10px',
             borderRadius: '50%',
             background: 'var(--color-accent-primary)',
@@ -60,7 +62,7 @@ const TimelineItem = ({ time, title, subtitle, isLast }) => (
         {/* Content */}
         <div style={{ flex: 1 }}>
             <h3 style={{
-                fontSize: '1.25rem', // Smaller title
+                fontSize: '1.25rem',
                 fontWeight: '600',
                 color: 'var(--color-text-primary)',
                 marginBottom: '0.1rem',
@@ -70,7 +72,7 @@ const TimelineItem = ({ time, title, subtitle, isLast }) => (
             </h3>
             {subtitle && (
                 <p style={{
-                    fontSize: '0.85rem', // Smaller subtitle
+                    fontSize: '0.85rem',
                     color: 'var(--color-text-secondary)',
                     opacity: 0.8,
                     marginTop: '2px'
@@ -84,15 +86,14 @@ const TimelineItem = ({ time, title, subtitle, isLast }) => (
 
 export default function Agenda() {
     const agendaItems = [
-        { time: "10:30", title: "Arrival & Registration" },
-        { time: "11:00", title: "Opening Remarks & GSG Overview", subtitle: "Alan El-Kadhi & Rand Safi" },
-        { time: "11:30", title: "Ice-Breaking Activity" },
-        { time: "12:00", title: "Elevate Program", subtitle: "2025 Impact & 2026 Vision" },
-        { time: "12:40", title: "Q&A Session" },
-        { time: "13:00", title: "Gaza Resilience Video" },
-        { time: "13:10", title: "Partner Testimonials" },
-        { time: "13:30", title: "Networking" },
-        { time: "14:00", title: "Lunch" }
+        { time: "", title: "Welcome" },
+        { time: "", title: "GSG Overview", subtitle: "Vision, Mission & Structure" },
+        { time: "", title: "Elevate Program Overview", subtitle: "Components & Impact" },
+        { time: "", title: "Supported Companies & Partners Showcase" },
+        { time: "", title: "Program Journey", subtitle: "Phases & Eligibility" },
+        { time: "", title: "CARM Introduction", subtitle: "Community Accountability" },
+        { time: "", title: "Q&A Session" },
+        { time: "", title: "Application Process & Next Steps" }
     ];
 
     return (

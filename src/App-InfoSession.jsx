@@ -8,10 +8,8 @@ import GSGVisionMission from './slides/GSGVisionMission';
 import GSGStructure from './slides/GSGStructure';
 import CARM from './slides/CARM';
 import GazaVideoPlaceholder from './slides/GazaVideoPlaceholder';
-import CompanyTestimonialVideo from './slides/CompanyTestimonialVideo';
+import TestimonialPlaceholder from './slides/TestimonialPlaceholder';
 import ElevateOverview from './slides/ElevateOverview';
-import { CapacityBuilding, Marketing, WorkingSpaces } from './slides/Raouf/Content';
-import { MarketAccessGrid } from './slides/Zaid/Content';
 import ElevatePhases from './slides/ElevatePhases';
 import Eligibility from './slides/Eligibility';
 import GeographicalDistribution from './slides/GeographicalDistribution';
@@ -38,46 +36,37 @@ function App() {
     // 3. GSG Ecosystem Structure
     { component: <GSGStructure />, speaker: null },
 
-    // 4. Elevate Overview
-    { component: <ElevateOverview />, speaker: null },
-
-    // 5. Capacity Building
-    { component: <CapacityBuilding />, speaker: null },
-
-    // 6. Marketing & Branding
-    { component: <Marketing />, speaker: null },
-
-    // 7. Market Access (4 Components including ElevateBridge)
-    { component: <MarketAccessGrid />, speaker: null },
-
-    // 8. Geographical Distribution
-    { component: <GeographicalDistribution />, speaker: null },
-
-    // 9. Supported Companies
-    { component: <SupportedCompanies />, speaker: null },
-
-    // 10. Elevate Partners
-    { component: <ElevatePartners />, speaker: null },
-
-    // 11. Elevate Phases (The Journey)
-    { component: <ElevatePhases />, speaker: null },
-
-    // 12. Eligibility
-    { component: <Eligibility />, speaker: null },
-
-    // 13. Video Placeholder 1
-    { component: <GazaVideoPlaceholder />, speaker: null },
-
-    // 14. Company Testimonials Video
-    { component: <CompanyTestimonialVideo />, speaker: null },
-
-    // 15. CARM Slide
+    // 4. CARM Slide
     { component: <CARM />, speaker: null },
 
-    // 16. Q&A Session
+    // 5. CARM Video Placeholder
+    { component: <GazaVideoPlaceholder />, speaker: null },
+
+    // 6. Elevate Overview
+    { component: <ElevateOverview />, speaker: null },
+
+    // 7. Elevate Phases
+    { component: <ElevatePhases />, speaker: null },
+
+    // 8. Eligibility
+    { component: <Eligibility />, speaker: null },
+
+    // 9. Geographical Distribution
+    { component: <GeographicalDistribution />, speaker: null },
+
+    // 10. Supported Companies
+    { component: <SupportedCompanies />, speaker: null },
+
+    // 11. Elevate Partners
+    { component: <ElevatePartners />, speaker: null },
+
+    // 12. Company Testimonials Video
+    { component: <TestimonialPlaceholder companyName="Company Testimonials" speakerName="From Ramallah Event" role="Video Presentation" />, speaker: null },
+
+    // 13. Q&A Session
     { component: <QASession />, speaker: null },
 
-    // 17. Application CTA
+    // 14. Application CTA
     { component: <ClosingCTA />, speaker: null },
   ];
 
@@ -122,10 +111,10 @@ function App() {
       <div style={{ position: 'fixed', bottom: '1.5rem', left: '1.5rem', zIndex: 1000, display: 'flex', gap: '0.8rem', alignItems: 'center' }}>
         <div style={{
           display: 'flex',
-          gap: '0.5rem',
+          gap: '0.6rem',
           background: 'var(--color-surface)',
-          padding: '0.5rem',
-          borderRadius: '20px',
+          padding: '0.6rem',
+          borderRadius: '24px',
           border: '1px solid var(--color-border)',
           backdropFilter: 'blur(10px)',
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
@@ -133,20 +122,17 @@ function App() {
           {[
             { id: 'INTRO', label: 'Intro', targetIndex: 0 },
             { id: 'GSG', label: 'GSG', targetIndex: 2 },
-            { id: 'ELEVATE', label: 'Elevate', targetIndex: 4 },
-            { id: 'PORTFOLIO', label: 'Portfolio', targetIndex: 8 },
-            { id: 'JOURNEY', label: 'Journey', targetIndex: 11 },
-            { id: 'VIDEOS', label: 'Videos', targetIndex: 13 },
-            { id: 'CARM', label: 'CARM', targetIndex: 15 },
-            { id: 'QA', label: 'Q&A', targetIndex: 16 },
-            { id: 'APPLY', label: 'Apply', targetIndex: 17 },
+            { id: 'CARM', label: 'CARM', targetIndex: 4 },
+            { id: 'ELEVATE', label: 'Elevate', targetIndex: 6 },
+            { id: 'COMPANIES', label: 'Companies', targetIndex: 10 },
+            { id: 'QA', label: 'Q&A', targetIndex: 13 },
+            { id: 'APPLY', label: 'Apply', targetIndex: 14 },
           ].map(item => {
             const isActive = currentIndex === item.targetIndex || 
               (item.id === 'GSG' && currentIndex >= 2 && currentIndex <= 3) ||
-              (item.id === 'ELEVATE' && currentIndex >= 4 && currentIndex <= 7) ||
-              (item.id === 'PORTFOLIO' && currentIndex >= 8 && currentIndex <= 10) ||
-              (item.id === 'JOURNEY' && currentIndex >= 11 && currentIndex <= 12) ||
-              (item.id === 'VIDEOS' && currentIndex >= 13 && currentIndex <= 14);
+              (item.id === 'CARM' && currentIndex >= 4 && currentIndex <= 5) ||
+              (item.id === 'ELEVATE' && currentIndex >= 6 && currentIndex <= 9) ||
+              (item.id === 'COMPANIES' && currentIndex >= 10 && currentIndex <= 12);
             
             return (
               <motion.button
@@ -161,14 +147,14 @@ function App() {
                   scale: isActive ? 1.05 : 1
                 }}
                 style={{
-                  padding: '0.5rem 0.85rem',
-                  borderRadius: '16px',
+                  padding: '0.75rem 1.25rem',
+                  borderRadius: '20px',
                   color: isActive ? '#fff' : 'var(--color-text-secondary)',
                   border: '1px solid transparent',
                   cursor: 'pointer',
-                  fontSize: '0.8rem',
+                  fontSize: '0.9rem',
                   fontWeight: 600,
-                  letterSpacing: '0.3px'
+                  letterSpacing: '0.5px'
                 }}
                 title={item.label}
               >

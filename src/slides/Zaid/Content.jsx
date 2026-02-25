@@ -20,18 +20,75 @@ const containerVariants = staggerContainer(0.15);
 export function MarketAccessGrid() {
     return (
         <Slide>
+            {/* Background Effect */}
+            <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'radial-gradient(circle at 70% 30%, rgba(48, 157, 196, 0.08) 0%, transparent 50%)',
+                pointerEvents: 'none',
+                zIndex: 0
+            }} />
             <FloatingBackground images={zaidImages} />
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                style={{ width: '100%', height: '100%' }}
-            >
-                <motion.h2 variants={fadeInUp} style={{ marginBottom: 'var(--space-2xl)' }}>
-                    Market Access Components
-                </motion.h2>
 
-                <div className="grid-3">
+            <div style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                padding: 'var(--space-2xl) var(--space-3xl) var(--space-lg)',
+                position: 'relative',
+                zIndex: 1
+            }}>
+                {/* Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    style={{
+                        marginBottom: 'var(--space-xl)'
+                    }}
+                >
+                    <div>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 'var(--space-sm)',
+                            marginBottom: 'var(--space-sm)',
+                            color: 'var(--brand-teal)'
+                        }}>
+                            <Globe size={20} />
+                            <span style={{
+                                fontSize: 'var(--font-size-sm)',
+                                fontWeight: 'var(--font-weight-bold)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '2px'
+                            }}>
+                                Global Expansion
+                            </span>
+                        </div>
+                        <h2 style={{
+                            fontSize: 'clamp(2.5rem, 5vmin, 4rem)',
+                            fontWeight: 'var(--font-weight-extrabold)',
+                            margin: 0,
+                            lineHeight: 'var(--line-height-tight)'
+                        }}>
+                            Market <span className="gradient-text">Access</span>
+                        </h2>
+                    </div>
+                </motion.div>
+
+                {/* 4 Components Grid */}
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={containerVariants}
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        gap: 'var(--space-lg)',
+                        flex: 1
+                    }}
+                >
                     <FeatureCard
                         title="C-Suite Coaching"
                         description="Upskilling leadership for global strategy."
@@ -80,8 +137,24 @@ export function MarketAccessGrid() {
                             </strong>
                         </div>
                     </FeatureCard>
-                </div>
-            </motion.div>
+
+                    <FeatureCard
+                        title="ElevateBridge"
+                        description="Collaboration over competition."
+                        delay={0.4}
+                    >
+                        <ul style={{ marginTop: 'var(--space-md)', marginBottom: 'var(--space-lg)' }}>
+                            <li>Network of Professional Hunters</li>
+                            <li>Global Opportunity Connections</li>
+                        </ul>
+                        <div style={{ marginTop: 'auto', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-border-subtle)' }}>
+                            <strong className="gradient-text" style={{ fontSize: 'var(--font-size-2xl)' }}>
+                                New Initiative
+                            </strong>
+                        </div>
+                    </FeatureCard>
+                </motion.div>
+            </div>
         </Slide>
     );
 }

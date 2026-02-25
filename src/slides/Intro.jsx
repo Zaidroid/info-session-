@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import gsgLogo from '../assets/gsg-logo.png';
 import mcLogo from '../assets/mc-logo.png';
 import elevateLogo from '../assets/elevate-logo.png';
+// TODO: Add donor logos to public folder:
+// - /public/sida-logo.png (Swedish International Development Cooperation Agency)
+// - /public/dutch-gov-logo.png (The Dutch Government)
 
 export default function Intro() {
     return (
@@ -21,7 +24,7 @@ export default function Intro() {
                         gap: '4rem',
                         marginBottom: 'var(--space-2xl)',
                         width: '100%',
-                        maxWidth: '1400px', // Ensure it doesn't get too spread out on huge screens
+                        maxWidth: '1400px',
                         marginInline: 'auto'
                     }}
                 >
@@ -57,67 +60,91 @@ export default function Intro() {
                     }}
                 />
 
-                {/* Subtitle */}
+                {/* Main Title */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 0.6 }}
                     style={{
-                        fontSize: 'clamp(1.5rem, 2.5vmin, 2.5rem)',
-                        fontWeight: 'var(--font-weight-light)',
+                        fontSize: 'clamp(2rem, 3.5vmin, 3.5rem)',
+                        fontWeight: 'var(--font-weight-bold)',
                         color: 'var(--color-text-primary)',
-                        marginBottom: 'var(--space-3xl)',
+                        marginBottom: 'var(--space-lg)',
                     }}
                 >
-                    Impact & Future Horizons
+                    Discover and Discuss <span className="gradient-text">Elevate Program 2026</span>
                 </motion.div>
 
-                {/* Floating Badge */}
+                {/* Donors Badge */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.3, duration: 0.5 }}
                     style={{
                         display: 'inline-flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
-                        gap: 'var(--space-sm)',
-                        padding: 'var(--space-md) var(--space-xl)',
+                        gap: 'var(--space-lg)',
+                        padding: 'var(--space-2xl) var(--space-3xl)',
                         background: 'var(--color-surface)',
                         backdropFilter: 'blur(var(--glass-blur))',
-                        borderRadius: 'var(--radius-full)',
+                        borderRadius: 'var(--radius-2xl)',
                         border: '1px solid var(--color-border-subtle)',
                         boxShadow: 'var(--shadow-lg)',
-                        fontSize: 'var(--font-size-lg)',
-                        color: 'var(--color-text-secondary)',
+                        marginTop: 'var(--space-2xl)',
                     }}
                 >
-                    <span>Palestine's Leading Tech Hub</span>
-                </motion.div>
-
-                {/* Event Name */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 0.6 }}
-                    style={{
-                        marginTop: 'var(--space-xl)',
-                        marginBottom: 'var(--space-2xl)',
-                    }}
-                >
-                    <h2 style={{
-                        fontSize: '1.8rem',
-                        fontWeight: '600',
-                        color: 'var(--color-text-primary)',
-                        lineHeight: 1.3,
-                        maxWidth: '800px',
-                        margin: '0 auto'
+                    <span style={{
+                        fontSize: 'var(--font-size-xs)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '2px',
+                        color: 'var(--color-text-tertiary)',
+                        fontWeight: 'var(--font-weight-bold)',
                     }}>
-                        Gaza Sky Geeks: Elevate Program<br />
-                        <span style={{ color: 'var(--color-text-secondary)', fontWeight: '400' }}>Impact and Future Horizons</span>
-                    </h2>
+                        Supported By
+                    </span>
+                    
+                    {/* Donor Logos Row - Centered */}
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 'var(--space-2xl)',
+                    }}>
+                        {/* Sida Logo */}
+                        <img 
+                            src="/sida-logo.png" 
+                            alt="Sida" 
+                            style={{ 
+                                height: '70px', 
+                                objectFit: 'contain'
+                            }} 
+                            onError={(e) => {
+                                e.target.style.display = 'none';
+                            }}
+                        />
+
+                        <div style={{ 
+                            width: '2px', 
+                            height: '60px', 
+                            background: 'var(--color-border-subtle)' 
+                        }} />
+
+                        {/* Dutch Government Logo */}
+                        <img 
+                            src="/dutch-gov-logo.png" 
+                            alt="Dutch Government" 
+                            style={{ 
+                                height: '70px', 
+                                objectFit: 'contain'
+                            }} 
+                            onError={(e) => {
+                                e.target.style.display = 'none';
+                            }}
+                        />
+                    </div>
                 </motion.div>
             </div>
         </Slide>
     );
 }
-
